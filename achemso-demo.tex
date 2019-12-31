@@ -67,7 +67,7 @@
 \author{Yulia Lovsky}
 \affiliation[First University]
 {AMOS and Department of Chemical and Biological Physics, Weizmann Institute of Science, 76100 Rehovot, Israel}
-\author{Eyal Yakobi}
+\author{Eyal Yacobi}
 \affiliation[Second University]
 {Soreq NRC, Yavne, Israel}
 \author{Ori Mor}
@@ -90,7 +90,7 @@
 %% optional argument to \title.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \title[An \textsf{achemso} demo]
-  {Sensing of arbitrarily shaped nanoparticles by Whispering Gallery Mode resonators}
+  {Three-dimensional sensing of arbitrarily shaped nanoparticles by whispering gallery mode resonators}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Some journals require a list of abbreviations or keywords to be
@@ -137,40 +137,41 @@ separate page at the end of the document.
 %% if an abstract is not used by the target journal.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{abstract}
-Whispering-gallery-mode (WGM) microresonators are a promising platform for highly sensitive, label-free detection and probing of individual nano-objects. The high Purcell-factor of these microresonators allows strong interactions between photons and nano-particles, molecules or single-atoms positioned within their evanescent field. Variations in the measured spectrum can be attributed to the optical and structural properties of the nano-object.
+Whispering-gallery-mode (WGM) microresonators are a promising platform for highly sensitive, label-free detection and probing of individual nano-objects. The high Purcell-factor of these microresonators allows strong interactions between photons and nanoparticles positioned within their evanescent field.
 
-So far, most of the works focused on the detection and sizing of spherical nano-objects. Our work focuses on 3-D characterization of arbitrarily shaped nanoparticles. We introduce and experimentally implement a theoretical model that comprehensively describes interactions between arbitrarily shaped nanoparticles with arbitrarily polarized WGM, taking into account effects that are often not considered or neglected. These effects include the elliptical polarization of the transverse-magnetic (TM) mode, the possible non-spherical shape of the nanoparticle, its finite size, and the ‘open-system’ nature of the normal optical modes. We also introduce a self-referencing measurement method that allows the extraction of information from measurements done at arbitrary positions within the WGM. We verify this model by experimentally scanning the position of a single \ce{WS_2} nanotube within the evanescent region of a WGM of a silica microtoroid resonator inside a scanning electron-microscope (SEM). Using our model we perform 3-D characterization of the nanotube, namely extract the ratios between the real and imaginary parts of its polarizability along both axes.
+So far, most of the works focused on the detection and sizing of spherical nanoparticles. Our work focuses on Three-dimensional (3D) characterization of arbitrarily shaped nanoparticles.
 
-Our model allows harnessing the ultrahigh sensitivity of detection using the WGM to extract 3-D information of various nano-objects and potentially other important properties, such as chirality and conformational changes.
+We introduce a theoretical model that describes interactions between nanoparticles with WGM resonators, taking into account effects that are often not considered, such as the elliptical polarization of the transverse-magnetic (TM) mode, the possible non-spherical shape of the nanoparticle, its finite size, and its ‘open-system’ nature. We also introduce a self-referencing measurement method that allows the extraction of information from measurements done at arbitrary positions of the nanoparticles within the WGM.
+
+We verify the model by experimentally probing a single Tungsten-disulfide (\ce{WS_2}) nanotube with a silica microtoroid resonator inside a scanning electron-microscope (SEM) and perform 3D characterization of the nanotube.
+
 \end{abstract}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Start the main part of the manuscript here.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
-Optical microresonators are at the heart of a wide range of applications and studies~\cite{vahala2003optical}. Particularly, WGM microcavities such as microspheres~\cite{arnold2003shift,vernooy1998high}, microdisks~\cite{savchenkov2004kilohertz}, microbottles~\cite{louyer2005tunable} and microtoroids~\cite{armani2003} resonantly confine light to small volumes and can serve as highly sensitive label-free detectors~\cite{vollmer2008whispering,vollmer2012}. Single-particle detection and sizing of spherical nano-objects using WGM cavities was successfully implemented~\cite{vollmer2008single,zhu2010,lu2011,dantham2012}, yet so far sensing of non-spherical particles has been limited to monolayers~\cite{noto2007,topolancik2007photoinduced} or large nano-objects~\cite{ren2007highQ,kim2012detection}. The characterization of non-spherical particles was performed by measuring the shifts of a single Lorentzian dip resonance of the microresonator ~\cite{arnold2003shift}. This method was applied later to characterize a layer of uniaxial particles by measuring the spectral changes of the TE and the TM modes. Here we suggest an approach for 3-D characterization of arbitrarily shape nanoparticle based on measuring the splitting of a single Lorentzian resonance. Mode splitting arises when two counterpropagating modes, ideally degenerated, are spectrally split due to perturbations in the surface or the surrounding of the microcavity. This might be caused by a nanoparticle entering the optical mode of the microcavity; the spectral properties of the mode splitting can be then correlated to the optical properties of a nanoparticle.
-While there are numerical simulations that include the complete polarization structure of TE and TM modes and can be applied to non-spherical particles (e.g. a finite element COMSOL simulation~\cite{kaplan2013finite}), there is a need in a comprehensive analytical model that can connect between the three-dimensional properties of the interacting nanoparticle to the observed WGM spectrum.
+Optical microresonators are at the heart of a wide range of applications and studies~\cite{vahala2003optical}. Particularly, WGM microcavities such as microspheres~\cite{arnold2003shift,vernooy1998high}, microdisks~\cite{savchenkov2004kilohertz}, microbottles~\cite{louyer2005tunable} and microtoroids~\cite{armani2003} resonantly confine light to small volumes and can serve as highly sensitive label-free detectors~\cite{vollmer2008whispering,vollmer2012}. Single-particle detection and sizing of spherical nano-objects using WGM cavities was successfully implemented~\cite{vollmer2008single,zhu2010,lu2011,dantham2012}, yet so far, sensing of non-spherical particles has been limited to monolayers~\cite{noto2007,topolancik2007photoinduced} or large nano-objects~\cite{ren2007highQ,kim2012detection}. The characterization of non-spherical particles was performed by measuring the shifts of a single Lorentzian dip resonance of the microresonator ~\cite{arnold2003shift}. This method was applied later to characterize a layer of uniaxial particles by measuring the spectral changes of the TE and the TM modes. Here we suggest an approach for 3-D characterization of arbitrarily shape nanoparticle based on measuring the splitting of a single Lorentzian resonance. Mode splitting arises when two counterpropagating modes, ideally degenerated, are spectrally split due to perturbations in the surface or the surrounding of the microcavity~\cite{Haroche1995splitting,Kippenberg:02,zhu2010,kim2010}. This might be caused by a nanoparticle entering the optical mode of the microcavity; the spectral properties of the mode splitting can then be correlated to the optical properties of a nanoparticle.
+While there are numerical simulations that include the complete polarization structure of TE and TM modes and can be applied to non-spherical particles (e.g. a finite element COMSOL simulation~\cite{kaplan2013finite}), there is a need for a comprehensive analytical model that connects the three-dimensional properties of the interacting nanoparticle to the observed WGM spectrum.
 
 In this work, we suggest such a model and characterize a single \ce{WS_2} nanotube using a high-Q toroidal microresonator by independently probing the whispering gallery TE and TM modes along the equator. We then correlate the induced spectral changes to the optical properties of the nanotube.
 
-The analytical model we developed is an extension for non-spherical particles of the formalism introduced by Mazzei \latin{et al.}~\cite{mazzei2007}, which was later generalized to treat more than one scatterer~\cite{yi2011multiple} .
+The analytical model we develop is an extension for non-spherical particles of the formalism introduced by Mazzei \latin{et al.}~\cite{mazzei2007}, which was later generalized to treat multiple scatterers~\cite{yi2011multiple}. Our model describes of how the spectral changes (of both TE and TM) depend on the coupling and loss rates, and how these rates depend on the linear (TE) or elliptical (TM)~\cite{junge2013strong,axelrod1984total,kawalec2007spectroscopic} polarization of the optical mode and the polarizability properties of arbitrarily shaped nanoparticle. Our model takes into account the asymmetric backscattering between the counterpropagating modes that arise when the losses of the system are significant~\cite{wiersig2011structure,peng2016chiral,zhu2010contorolled}. It also takes into account the effect of the imaginary part of the polarizability tensor~\cite{hu2014mode} and the finite size of the nanoparticle on the induced spectral changes. Finally, to overcome the strong effect of the exact position of the nanoparticle on the measurement, we propose a self-referenced method of measurement that allows real-time monitoring of the particle position in the standing wave pattern.
 
-The model gives the full description of how the spectral changes (of both TE and TM) depend on the coupling and loss rates, and how these rates depend on the linear (TE) or elliptical (TM)~\cite{junge2013strong,axelrod1984total,kawalec2007spectroscopic} polarization of the optical mode and the polarizability properties of arbitrarily shaped nanoparticle, which allows the 3D characterization. The model takes into account the asymmetric backscattering between the counterpropagating modes that arise when the losses of the system are significant~\cite{wiersig2011structure,peng2016chiral,zhu2010contorolled}. It also takes into account the effect of the imaginary part of the polarizability tensor~\cite{hu2014mode} and the finite size of the nanoparticle on the induced spectral changes. Also, to overcome the strong effect of the exact position of the nanoparticle on the measurement we propose a self-referenced method of measurement that allows real-time monitoring of the particle position in the standing wave pattern.
+\section{Analytical model}
 
-\section{The analytical model}
+\subsection{Hamiltonian of the Cavity Modes}
 
-\subsection{Cavity model}
-
-WGM resonators support two counterpropagating modes (see Fig.~\ref{fig:torusTMTE}). Ideally, these two modes are degenerate; however surface roughness and other defects couple between the counterpropagating modes, lifting this degeneracy. Such a system is described by the normal modes, which appear as the split mode spectrum~\cite{Haroche1995splitting,Kippenberg:02,zhu2010,kim2010}.
+WGM resonators support two counterpropagating modes coupled to the tapered fiber modes (see Fig.~\ref{fig:torusTMTE}). Ideally, these two modes are degenerate; however surface roughness and other defects couple between the counterpropagating modes, lifting this degeneracy. Such a system is described by the normal modes, which appear as the split-mode spectrum~\cite{Haroche1995splitting,Kippenberg:02,zhu2010,kim2010}.
 \begin{figure}[H]
 \centering
              \includegraphics[trim=0cm 1.0cm 0.5cm 0.5cm, clip, width=0.5\textwidth]{Images/cw_ccw.png}
-             \caption{\textbf{Bare cavity model sketch.} Illustration of the fiber-coupled WGM resonator where light is sent from one direction, its modes ($a_{in}, a_{out}, a_{cw}, a_{ccw}$), and corresponding rates ($\kappa_i, \kappa_{ex}, h$). 
+             \caption{\textbf{Bare cavity model sketch.} Illustration of the fiber-coupled WGM resonator where light is sent from one direction. $a_{cw}$ and $a_{ccw}$ denote the clockwise and counterclockwise modal amplitudes, respectively. $a_{in}$ denote the input amplitude from the fiber that couples to the counterclockwise mode and $a_{out}$ denote the fiber modal amplitude after the interaction with the cavity. $h$ is the intrinsic coupling rate and $\kappa_i, \kappa_{ex}$ are the intrinsic and extrinsic (fiber coupling) rates. 
               \label{fig:torusTMTE}}
   \end{figure}
-The expressions for the two eigenvalues of the normal modes, either of the TE or the TM mode, of a bare cavity are~\cite{mazzei2007}: $\displaystyle \omega_{\pm}=\omega_c \pm h - i \kappa$, where $\omega_c$ is the resonance central frequency, $\kappa$ is the total loss rate of a bare cavity, and $\textit{h}$ is the intrinsic coupling rate between the clockwise (\textit{cw}) and the counterclockwise (\textit{ccw}) propagating modes due to surface roughness.
+The eigenfrequencies of the normal modes, either of the TE or the TM mode, of a bare cavity are~\cite{mazzei2007}: $\displaystyle \omega_{\pm}=\omega_c \pm h - i \kappa$, where $\omega_c$ is the resonance central frequency, $\kappa_t$ is the total loss rate of a bare cavity defined as $\kappa_t = \kappa_i + \kappa_{ex}$, and $\textit{h}$ is the intrinsic coupling rate between the clockwise (\textit{cw}) and the counterclockwise (\textit{ccw}) propagating modes due to surface roughness.
 
-When a nanoparticle is positioned in the optical mode it can absorb or scatter light. The scattered light can couple coherently back into the same mode or backscatter into the counterpropagating mode, or be lost incoherently scattering to the free-space modes. The backscattering causes an additional coupling between the counterpropagating modes, hence causes an additional splitting of the spectrum. Scattering into the same mode causes a total shift of both normal modes. Loss due to scattering or absorption causes broadening of the normal modes spectrum.
+When a nanoparticle is positioned within the optical mode, it absorbs or scatters light. The scattered light couples coherently back into the same mode or backscatters into the counterpropagating mode, or incoherently scatter to the free-space modes. The backscattering causes an additional coupling between the counterpropagating modes, hence modifies the splitting of the spectrum. Scattering into the same mode causes a total shift of both normal modes. Loss due to scattering or absorption causes broadening of the normal modes spectrum.
 
 To find the new complex eigenfrequencies of the cavity we need to solve a new set of equations of motion. We write the non-Hermitian Hamiltonian~\cite{yi2011multiple} for the counter-propagating modes, which includes coupling and loss due to the nanoparticle, in the following way:
 \begin{equation}
@@ -196,7 +197,7 @@ where $g_{k,k'}$ is the complex coupling rate between two propagating modes, whi
 \end{equation}
 The first term of $\mathcal{H}_{loss}$ describes the losses, scattering ($\gamma_s$) and absorption ($\gamma_a$), due to presence of the particle. The second term represents the intrinsic cavity loss ($\kappa_i$).
 
-From the given Hamiltonian one can derive the following set of coupled linear equations of motion:
+From the given Hamiltonian one can derive the following set of steady-state coupled linear equations:
 \begin{equation}
 \begin{split}
 \omega a_{cw} &= C a_{cw} + D_1 a_{ccw} \\
@@ -212,14 +213,14 @@ D_1 &= g_{cw,ccw} + h - i \left(\gamma_{s,cw,ccw} + \gamma_{a,cw,ccw} \right) \\
 D_2 &= g_{ccw,cw} + h - i \left(\gamma_{s,ccw,cw} + \gamma_{a,ccw,cw} \right)
 \end{split}
 \end{equation}
-The subscripts of coupling and loss rates specify the modes that are involved in the interaction. Mathematically, they have a different phase dependence~\cite{yi2011multiple}: $\left\{g, \gamma_s, \gamma_a \right\}_{k,k'} \propto e^{- i \left(\beta_k - \beta_{k'} \right) x}$~\cite{yi2011multiple}.
+The subscripts of coupling and loss rates specify the modes that are involved in the interaction. Mathematically, they have a different phase dependence~\cite{yi2011multiple}: $\left\{g, \gamma_s, \gamma_a \right\}_{k,k'} \propto e^{- i \left(\beta_k - \beta_{k'} \right) x}$~\cite{yi2011multiple}, $\beta_k$ being the propagation constant of the $k$ mode.
 Solving the equations of motion gives the new complex eigenfrequencies, $\omega_{\pm}$ of the form:
 \begin{equation}
 \omega_{\pm} = C \pm \sqrt{D_1 D_2}
 \end{equation}
 The real parts of $\omega_{\pm}$ are the center frequencies of the two normal modes. The imaginary parts correspond to the widths of the normal mode resonances by $\Gamma_{\pm} = 2 Im\left\{ \omega_{\pm} \right\}$.
 
-The normal modes shifts and broadening changes are obtained by taking the difference between the new eigenmodes and the bare cavity normal modes. We denote the shifts (broadening changes) of the symmetric and antisymmetric normal modes by $\delta \omega_+$ ($\delta \Gamma_+$) and $\delta \omega_-$ ($\delta \Gamma_-$), respectively:
+The shifts and broadening changes of the resonances are obtained by taking the difference between the new eigenmodes and the bare-cavity normal modes. We denote the shifts (broadening changes) of the symmetric and antisymmetric modes by $\delta \omega_+$ ($\delta \Gamma_+$) and $\delta \omega_-$ ($\delta \Gamma_-$), respectively:
 \begin{equation}
 \begin{split}
 \delta \omega_{\pm} &= Re \left\{ \omega_{\pm} \right\} - \omega_c \mp h \\
@@ -227,7 +228,7 @@ The normal modes shifts and broadening changes are obtained by taking the differ
 \end{split}
 \label{eq:splitting_broadening}
 \end{equation}
-In split mode sensing it is convenient to use the difference between spectral changes, the splitting~\cite{zhu2010} $2 \Delta \omega$ and the difference between the broadenings~\cite{shao2013detection} $2 \Delta \Gamma$ of the normal modes.
+In split-mode sensing, it is convenient to use the difference between spectral changes, i.e., the splitting~\cite{zhu2010} ,$2 \Delta \omega$, and the difference between the broadenings~\cite{shao2013detection} ,$2 \Delta \Gamma$, of the normal modes.
 \begin{equation}
 \begin{split}
 \Delta \omega_{\pm} &= \frac{1}{2} \left( \omega_{-} - \omega_{+} \right)\\
@@ -243,13 +244,13 @@ S \Gamma_{\pm} &= \frac{1}{2} \left( \Gamma_{-} + \Gamma_{+} \right)
 \end{equation}
 In particular, we normalize half the splitting and half the broadening difference by the average shift and average broadening, respectively. This eliminates the dependence on the mode properties, such as mode volume or the position of the particle in the mode, to allow accurate measurement of the nanoparticle properties.
 
-\subsection{Cavity particle interaction}
+\subsection{Cavity-particle interaction}
 
-The induced coupling rate and losses depend on the material properties and shape of the nanoparitcle, given by the polarizability tensor, $\bar{ \bar\alpha}$, and on the orientation of the (non spherical) particle in the optical field. We use the dipole approximation \textbf{[add refs]}, that dictates a linear relation between the applied external electric field $ \vec {\mathcal {E}}$ and the induced polarization $\vec P$ in the particle: $ \vec {P} =\mathcal{R}e [\bar{ \bar \alpha}] \vec {\mathcal E} $. Accordingly, the coupling energy between the counterpropagating modes, given by the perturbation energy $ \vec {P} \cdot \vec {\mathcal E}^*$ caused by the particle is:
+The induced coupling rate and losses depend on the material properties and shape of the nanoparitcle, given by the polarizability tensor, $\bar{ \bar\alpha}$, and on the orientation of the (non spherical) particle in the optical field. We use the dipole approximation~\cite{mazzei2007}, that dictates a linear relation between the applied external electric field $ \vec {\mathcal {E}}$ and the induced polarization $\vec P$ in the particle: $ \vec {P} =\mathcal{R}e [\bar{ \bar \alpha}] \vec {\mathcal E} $. Accordingly, the coupling energy between the counterpropagating modes, given by the perturbation energy $ \vec {P} \cdot \vec {\mathcal E}^*$ caused by the particle is:
 \begin{equation}\label{g_k_ktag}
     \hbar g_{k,k'}=  - \mathcal{R}e [\bar{\bar \alpha}] ~\vec{ \mathcal{E}}_k \cdot  \vec{ \mathcal{E}}^*_{k'}
 \end{equation}
-The expression of the induced coupling rate between the counterpropagating modes of the TE linearly polarized field by a spherical particle was given by \textbf{[add refs]}:
+In this equation lays the 3D information about the nanopatricle and how it interacts with the resonator's fields for a given orientation. The expression of the induced coupling rate between the counterpropagating modes of the TE linearly polarized field by a spherical particle was given by~\cite{yi2011multiple}:
 \begin{equation} \label{eq:g_TE_nanotube}
 g^{TE}_{k,k'} = - g e^{\pm i \Delta\beta x}
 \end{equation}
@@ -258,7 +259,7 @@ The expression for interaction with a circularly polarized field is of the form,
 \begin{equation} \label{eq:g_TM_nanotube}
     g^{TM}_{k,k'} = - \left ( g \pm ig_{cp} \right) e^{\pm i \Delta\beta x}
 \end{equation}
-where we define two in-quadrature terms, in accordance with the two in-quadrature components of the TM electrical field.
+where we define two in-quadrature terms, which result from the two in-quadrature components of the TM electrical field, the polarizability tensor asymmetry and the nanoparticle orientation  (for an example see supporting information). The subscript $cp$ stand for "cross-polarization", indicating that this term represents backscattering from different in-quadrature polarizations, e.g. $E_r \rightarrow iE_{\phi}$ and vice-versa.
 
 The loss rate is the sum of the absorption loss rate $\gamma_a$, which is proportional to the imaginary part of the polarizability tensor $\mathcal{I}m[\bar{ \bar \alpha}]$ and the scattering loss rate $\gamma_s$, which is proportional to $|\alpha|^2$. The loss rate is also dependent on the polarization of the field and the orientation of the particle relative to it.
 \begin{figure}[H]
@@ -272,14 +273,14 @@ The loss rate is the sum of the absorption loss rate $\gamma_a$, which is propor
 
 \subsection{Calculation: sensing of a spherical particle with different WGM polarizations}
 
-The induced spectral shifts and broadening strongly depend on the polarization of the mode.  Fig.~\ref{fig:TETMcompare} we illustrate the sensitivity of linearly polarized TE modes as well as circular and elliptical polarization of the TM mode to the presence of a spherical particle. For example, Fig.~\ref{fig:TETMcompare}e shows that the splitting signal of a perfect circularly polarized TM mode is insensitive to spherical particles at all (the red and the black curves that represent the shift of the symmetric and antisymmetric normal modes, respectively, coincide). This is because coherently scattered light from a polarization-preserving spherical particle cannot couple light into the orthogonally polarized mode and induce splitting, therefore both normal modes are red-shifted together (and have the same broadening). Detection of spherical particles using a perfectly circularly polarized TM mode is still possible by measuring the average shift (or average broadening) of the normal modes.
+The induced spectral shifts and broadening strongly depend on the polarization of the mode.  In Fig.~\ref{fig:TETMcompare}, we illustrate the sensitivity of linearly polarized TE modes as well as circular and elliptical polarization of the TM mode to the presence of a spherical particle. For example, Fig.~\ref{fig:TETMcompare}e shows that the splitting signal of a perfect circularly polarized TM mode is insensitive to spherical particles at all (the red and the black curves that represent the shift of the symmetric and antisymmetric normal modes, respectively, coincide). This is because coherently scattered light from a polarization-preserving spherical particle cannot couple light into the orthogonally polarized mode and induce splitting, therefore both normal modes are red-shifted together (and have the same broadening). Detection of spherical particles using a perfectly circularly polarized TM mode is still possible by measuring the average shift (or average broadening) of the normal modes.
 
 In Fig.~\ref{fig:TETMcompare}c we show the case of elliptically polarized TM mode, such as in silica WGM microresonators in air or water (see Supplementary Material). The counterpropagating elliptically polarized fields give rise to a slightly intensity-modulated pattern due to the particle presence (Fig.~\ref{fig:TETMcompare}f). This means that a splitting signal of a typical TM mode could indeed be used even for the sensing of spherical nanoparticles, although showing lower signal compared to the linearly polarized TE mode (Fig.~\ref{fig:TETMcompare}d). For example, for a silica microresonator in air, the maximum induced change in the splitting of the TM mode is only $\approx 34\%$ of the induced change in splitting of the TE mode (for a silica microresonator in water it is $\approx 70 \%$).
 
 \begin{figure}[H]
 \centering
                 \includegraphics[trim=0.0cm 0.0cm 0.0cm 0.0cm, clip, width=0.95\textwidth]{Images/TMspherical_modified_3.png}\quad
-             \caption{\textbf{Sensing of a spherical dielectric particle using the TM mode.} \textbf{a-c,} The spectral changes upon introduction of a spherical, $120nm$ in diameter, polystyrene nanoparticle inside the optical mode (for details see methods). The bare cavity spectrum (blue curve) is changed due to the presence of the particle (red curve) inside a linearly polarized mode (a). The induced spectral changes of a perfectly circularly polarized TM mode (b) and of typical TM mode with an elliptical polarization (c). (d)-(f) show the shifts ($\delta \omega$) of the symmetric (red curves) and antisymmetric (black curves) normal modes as a function of the position of the particle on the equator (eq.~\ref{eq:splitting_broadening}) of the linearly (d), circularly (e) and elliptically (f) polarized TM vs. the position of the nanoparticle along the equator.  The induced splitting signal is given by subtraction between the red and the black curves in (d)-(f) (not shown). The average shift is shown with the dash blue lines and marked by \textit{S}$\omega$.
+             \caption{\textbf{Sensing of a spherical dielectric particle using the TM mode.} \textbf{a-c,} The spectral changes upon introduction of a spherical, $120nm$ in diameter, polystyrene nanoparticle inside the optical mode (for details see methods). The bare cavity spectrum (blue curve) is changed due to the presence of the particle (red curve) inside a linearly polarized mode (a). The induced spectral changes of a perfectly circularly polarized TM mode (b) and of typical TM mode with an elliptical polarization (c). \textbf{d-f,} show the shifts ($\delta \omega$) of the symmetric (red curves) and antisymmetric (black curves) normal modes as a function of the position of the particle on the equator (eq.~\ref{eq:splitting_broadening}) of the linearly (d), circularly (e) and elliptically (f) polarized TM vs. the position of the nanoparticle along the equator.  The induced splitting signal is given by subtraction between the red and the black curves in (d)-(f) (not shown). The average shift is shown with the dash blue lines and marked by \textit{S}$\omega$. \textbf{g-k,} Illustration of the pola
 						\label{fig:TETMcompare}}
 \end{figure}
 
@@ -288,7 +289,7 @@ In Fig.~\ref{fig:TETMcompare}c we show the case of elliptically polarized TM mod
 A $\ce{WS_2}$ nanotube with an outer diameter of $60nm$ is brought close to the surface of a silica microtoroid and placed at the equatorial level, perpendicularly to the surface with nanometer accuracy. This was possible by conducting the experiment in a customized SEM vacuum chamber (Fig. \ref{fig:experiment}a).
 While monitoring the exact position of the nanotube using the SEM, we measure the induced spectral shifts and broadening of the TE and TM polarized normal modes. These are then correlated to the polarizability tensor of the particle or its orientation.
 
-An example of a single shot spectra with the nanotube brought into the evanescent field of a microtoroidal WGM resonator is shown the red and blue curves in Fig. \ref{fig:experiment}c, respectively. Fig. \ref{fig:experiment}d shows the shift of the symmetric and asymmetric modes and the induced splitting (the difference between the shifts) at one, arbitrarily chosen, along the equator, recorded over time. The modulation of the nanotube position near the surface allows a repeatable measurement with and without the perturbation and an accurate estimation of the induced shifts and broadening of the normal modes.
+An example of a single-shot spectrum with the nanotube brought into the evanescent field of a microtoroidal WGM resonator is shown the red and blue curves in Fig. \ref{fig:experiment}c, respectively. Fig. \ref{fig:experiment}d shows the shift of the symmetric and asymmetric modes and the induced splitting (the difference between the shifts) of the nanotube brought in-and-out of the evanescent wave. The modulation of the nanotube position near the surface allows a repeatable measurement with and without the perturbation and an accurate estimation of the induced shifts and broadening of the normal modes.
 
 \begin{figure}[H]
 \centering
@@ -381,19 +382,29 @@ is obtained from the ratio between the average shift to the average broadening: 
    \frac{\textit{S} \omega} {\textit{S} \Gamma}=\frac{g_{k,k}}{\gamma_{a,k,k}}\approx \frac{Re ( \alpha_{||} )}{Im (\alpha_{||})} = R_{im/re}^{||}
 \end{equation}
 
-\textbf{Measured polarizability ratios.} The measured polarizability ratios for the nanotube are as follows:
-\begin{equation}\label{eq:ratios_nanotube}
-\begin{split}
-  & R_{re}  = 0.38 \pm 0.05 \\
-   & R_{im}  = 0.12 \pm 0.06\\
-   & R_{im/re}^{||}  = 0.5 \pm 0.05 \\
-   & R_{im/re}^{\perp} = 0.16 \pm 0.8
-\end{split}
-\end{equation}
-In the following discussion we address in detail each of the polarizability ratios, $R_{re}$, $R_{im}$ and $R_{im/re}^{||}$. We approximate the end of the nanotube that enters the optical mode by a prolate ellipsoid and calculate the polarizability of an ellipsoid~\cite{hulst1957light}. We use the measured diameter of the nanotube $58nm \pm 2nm$. The exact length of the nanotube inside the mode is not well-defined so we make our calculations assuming an ellipsoid with a varying length. The ellipsoid length corresponds to the overlap of the nanotube with the optical mode (overlap length).  The permittivities that are used for the calculations are $\epsilon_{||}=14.26-i0.55$ and $\epsilon_{\perp}=10.3-i0.2$~\cite{taverna2002}.
+\textbf{Measured polarizability ratios.}
+
+In the following discussion we address in detail each of the polarizability ratios, $R_{re}$, $R_{im}$, $R_{im/re}^{||}$ and $R_{im/re}^{\perp}$. We approximate the end of the nanotube that enters the optical mode by a prolate ellipsoid and calculate the polarizability of an ellipsoid~\cite{hulst1957light}. We use the measured diameter of the nanotube $58nm \pm 2nm$. The exact length of the nanotube inside the mode is not well-defined so we make our calculations assuming an ellipsoid with a varying length. The ellipsoid length corresponds to the overlap of the nanotube with the optical mode (overlap length).  The permittivities that are used for the calculations are $\epsilon_{||}=14.26-i0.55$ and $\epsilon_{\perp}=10.3-i0.2$~\cite{taverna2002}. The measured and calculated polarizability ratios for the nanotube are presented in table \ref{tbl:PR}.
+
+\begin{table}[H]
+  \caption{Summery of measured and calculated polarizability ratios}
+  \label{tbl:PR}
+  \begin{tabular}{lcccc}
+    \hline
+     & \multicolumn{4}{c}{Polarizability ratios}\\
+                                & $R_{re}$ & $R_{im}$ & $R_{im/re}^{||}$ & $R_{im/re}^{\perp}$ \\
+    \hline
+    Nanotube measured  & $0.38 \pm 0.05$ &  $0.12 \pm 0.06$ & $0.5 \pm 0.05$ & $0.16 \pm 0.8$ \\
+    Nanotube calculated\textsuperscript{\emph{a}}  & 0.44 &  0.05 & ?? & ?? \\
+    Bulk calculated\textsuperscript{\emph{a}}  & $0.48$ &  $0.017$ & $0.04$ & $0.0015$ \\
+    \hline
+  \end{tabular}
+  
+  \textsuperscript{\emph{a}} See supporting information.
+\end{table}
 
 Fig.~\ref{fig:pol_ratios}a presents the comparison of the measured value for the ratio between the real parts of the polarizability $R_{re}$, (blue dot) to the calculated value of $R_{re}$ ratio vs. the overlap length(blue curve). The estimated overlap length in our measurement is $130nm$, which is given by our FEM simulation in Comsol (see methods).
-For comparison the dashed black curve in Fig~\ref{fig:pol_ratios}.a represents the polarizability ratio for bulk \ce{WS_2} ($ R_{re}^{bulk}=\epsilon_{\perp}'-1 / \epsilon_{||}'-1 =0.48 $).
+For comparison the dashed black curve in Fig~\ref{fig:pol_ratios}.a represents the polarizability ratio for bulk \ce{WS_2}.
 
 The ratio $R_{re}=0.16\pm0.05$ of a single suspended nanotube was measured previously in the far-field regime, using Raman Spectroscopy~\cite{tenne2005orientation} (green dot in Fig.~\ref{fig:pol_ratios}a). In that work an individual multiwalled \ce{WS_2} nanotube with an outer diameter of $15-25nm$ was placed on an AFM tip and illuminated with linearly polarized light ($633nm$) at different angles to the axis of the nanotube. The overlap length corresponds to the spot size of $\sim1um$ that was used.
 The green dash-dot curve in Fig.~\ref{fig:pol_ratios}a represents the calculated $R_{re}$ for a nanotube with an outer diameter of $25nm$ at a wavelength of $633$nm.
@@ -407,18 +418,8 @@ The green dash-dot curve in Fig.~\ref{fig:pol_ratios}a represents the calculated
 \label{fig:pol_ratios}
 \end{figure}
 
-In Fig.~\ref{fig:pol_ratios}b, the measured ratio between the imaginary parts of the polarizability $ R_{im}$ is plotted (blue dot) along with the calculated ratio vs. the overlap length (blue solid curve). Note that in all our calculations for the polarizability along the short axis of the nanotube we use an effective value of permittivity: $\sqrt{\epsilon_{\perp}\epsilon_{||}}$~\cite{taverna2002,kociak2001experimental}. The reason is the fact that in the multiwall nanotube of such small radius ($\sim 30nm$) the principal crystallographic axis (defined perpendicular to the \ce{WS_2} sheets) changes rapidly on the scale of the nanostructure, thus both the in-plane and out-of-plane components of the dielectric tensor contribute to the out-of-plane polarizability calculation. The dash-dot blue curve in Fig.~\ref{fig:pol_ratios}b represents the calculated polarizability ratio without this adaptation. We see that indeed using the adapted value leads to a much better agreement. The dashed black curve represents the calculated value for the bulk-\ce{WS_2}:
-\begin{equation}\label{eq:Rim_bulk}
-  \frac{\epsilon_{\perp}''}{\epsilon_{\parallel}''}=0.017.
-\end{equation}
+In Fig.~\ref{fig:pol_ratios}b, the measured ratio between the imaginary parts of the polarizability $ R_{im}$ is plotted (blue dot) along with the calculated ratio vs. the overlap length (blue solid curve). Note that in all our calculations for the polarizability along the short axis of the nanotube we use an effective value of permittivity: $\sqrt{\epsilon_{\perp}\epsilon_{||}}$~\cite{taverna2002,kociak2001experimental}. The reason is the fact that in the multiwall nanotube of such small radius ($\sim 30nm$) the principal crystallographic axis (defined perpendicular to the \ce{WS_2} sheets) changes rapidly on the scale of the nanostructure, thus both the in-plane and out-of-plane components of the dielectric tensor contribute to the out-of-plane polarizability calculation. The dash-dot blue curve in Fig.~\ref{fig:pol_ratios}b represents the calculated polarizability ratio without this adaptation. We see that indeed using the adapted value leads to a much better agreement. The dashed black curve represents the calculated value for the bulk-\ce{WS_2}.
 
-The calculated ratios for bulk-\ce{WS_2} are:
-\begin{equation}\label{eq:Rre_im_bulk}
-  R_{im/re,bulk}^{||}=\frac{\epsilon_{||}''}{\epsilon_{||}'-1}=0.04
-\end{equation}
-\begin{equation}\label{eq:Rre_im_bulk_perp}
-    R_{im/re,bulk}^{\perp}=\frac{\epsilon_\perp''}{\epsilon_\perp'-1}=0.0015
-\end{equation}
 We see that the in-plane ratio ($R_{im/re}^{||}$) for the \ce{WS_2} nanotube is $\sim12$ times larger than the ratio for bulk-\ce{WS_2}. The out-of-plane ratio ($R_{im/re}^{\perp}$) is $\sim106$ times larger than the bulk ratio. We believe this is attributed to the fact that the imaginary part of the permittivity is higher in the nanotube than in bulk, whereas there is a decrease of the real part. Specifically, the direct band-gap of bulk 2H-WS$_2$ is at $2.04$eV ($\lambda=608nm$)~\cite{wilson1969transition}, the indirect band-gap at $1.3$eV ($\lambda=954nm$)~\cite{ballif1999optical} and exciton A is at $1.95$eV ($\lambda=636nm$)~\cite{frey1998optical}. The optical absorption of nanotubes was believed to have the same features~\cite{frey1998optical} as the bulk. However, recent work~\cite{Yadgarov2016unique} proves the presence of both excitonic and plasmonic features. Namely, the nanotubes preserve their \ce{WS_2} bulk properties but also maintain a plasmonic resonance at $\sim 600nm$. Our illumination, at $735nm$, is detuned from all these transitions and the plasmonic resonance. Hence, we can assume that we measure the plasmonic off-resonance response, being red-detuned by $\sim135nm$ from the plasmon resonance center.
 Different loss mechanism contributes to the imaginary part of the dielectric function, and one of them might be oscillations of the free charge, a plasmon~\cite{Yadgarov2016unique}. This could explain the increased by an order of a magnitude imaginary part of the permittivity.
 
@@ -466,6 +467,19 @@ The position of the nanotube near the surface is modulated by approximately $200
 Figure~\ref{fig:pol_ratios} the calculations of the polarizability ratios of the nanotube assume the following permittivities along its two axes: $\epsilon_{||}=14.26-i0.55$ and $\epsilon_{\perp}=10.3-i0.2$~\cite{taverna2002,kociak2001experimental} for the wavelength of $735nm$ and an ellipsoidal particle~\cite{hulst1957light}. The calculation of the polarizabilities of bulk-\ce{WS_2} assume $\epsilon_{||}=14.26-i0.55$ and $\epsilon_{\perp}=7.44-i0.0095$~\cite{taverna2002}.
 
 Comsol simulations: The decay length of the TM field in the microtoroid that was used (major diameter $52um$, minor diameter $8um$) is $120nm$  (see inset in Fig.~\ref{fig:pol_ratios}a) and together with the orientation of the nanotube we get approximately $130nm$ of overlap.
+
+\textbf{$g_{cp}$ for a nanotube}
+\begin{equation}
+g_{k,k'} \propto \left[ \underbrace{C_{\parallel,re}^{k,k'} \operatorname{Re} \left[ \alpha_{\parallel} \right] + C_{\perp,re}^{k,k'} \operatorname{Re} \left[ \alpha_{\perp} \right]}_{g} \pm i \underbrace{C_{im} \left( \operatorname{Re} \left[ \alpha_{\parallel} \right] - \operatorname{Re} \left[ \alpha_{\perp} \right] \right)}_{g_{cp}} \right] e^{\pm 2 i k x} 
+\end{equation}
+where,
+\begin{align*}
+&C_{\parallel,re}^{k,k'} \,= d^2 \sin^2{\theta} \left[(c+1)^2 \sin^2{\phi} - \cos^2{\phi}\right]\\
+&C_{\perp,re}^{k,k'} = d^2 \left\{ \cos^2{\phi} \left[ \right( 1 + c \left)^2 - \cos^2{\theta} \right] + \sin^2{\phi} \left[ \right( 1 + c \left)^2 \cos^2{\theta} - 1 \right] \right\}\\
+&C_{im} \ \: = d^2(c+1) \sin^2{\theta} \sin{2\phi}\\
+&C_{\parallel}^{k,k} \;\:\! = d^2 \sin^2{\theta} \left[(c+1)^2 \sin^2{\phi} + \cos^2{\phi}\right]\\
+&C_{\perp}^{k,k} \;\:\! = d^2 \left\{ \cos^2{\phi} \left[ \right( 1 + c \left)^2 + \cos^2{\theta} \right] + \sin^2{\phi} \left[ \right( 1 + c \left)^2 \cos^2{\theta} + 1 \right] \right\}
+\end{align*}
 
 \end{suppinfo}
 
