@@ -231,15 +231,15 @@ The shifts and broadening changes of the resonances are obtained by taking the d
 In split-mode sensing, it is convenient to use the difference between spectral changes, i.e., the splitting~\cite{zhu2010} ,$2 \Delta \omega$, and the difference between the broadenings~\cite{shao2013detection} ,$2 \Delta \Gamma$, of the normal modes.
 \begin{equation}
 \begin{split}
-\Delta \omega_{\pm} &= \frac{1}{2} \left( \omega_{-} - \omega_{+} \right)\\
-\Delta \Gamma_{\pm} &= \frac{1}{2} \left( \Gamma_{-} - \Gamma_{+} \right)
+\Delta \omega &= \frac{1}{2} \left( \omega_{-} - \omega_{+} \right)\\
+\Delta \Gamma &= \frac{1}{2} \left( \Gamma_{-} - \Gamma_{+} \right)
 \end{split}
 \end{equation}
 We find it convenient to define also the average shift and the average broadening:
 \begin{equation}
 \begin{split}
-S \omega_{\pm} &= \frac{1}{2} \left( \omega_{-} + \omega_{+} \right)\\
-S \Gamma_{\pm} &= \frac{1}{2} \left( \Gamma_{-} + \Gamma_{+} \right)
+S \omega &= \frac{1}{2} \left( \omega_{-} + \omega_{+} \right)\\
+S \Gamma &= \frac{1}{2} \left( \Gamma_{-} + \Gamma_{+} \right)
 \end{split}
 \end{equation}
 In particular, we normalize half the splitting and half the broadening difference by the average shift and average broadening, respectively. This eliminates the dependence on the mode properties, such as mode volume or the position of the particle in the mode, to allow accurate measurement of the nanoparticle properties.
@@ -265,7 +265,7 @@ The loss rate is the sum of the absorption loss rate $\gamma_a$, which is propor
 \begin{figure}[H]
 \centering
              \includegraphics[trim=0cm 0.0cm 0.0cm 0.0cm, clip, width=0.5\textwidth]{Images/interaction.png}
-             \caption{\textbf{Rates of interaction.} }
+             \caption{\textbf{Particle-cavity interaction rates.} The grey arrows illustrate the backscattering of light from the particle back to the same mode, $g_{cw,cw}$ and $g_{ccw,ccw}$, or to the counterpropageting one, $g_{cw,ccw}$ and $g_{ccw,cw}$. The absorption, $\gamma_{a,k,k'}$, and scattering, $\gamma_{s,k,k'}$, are illustrated by a yellow and maroon arrows.}
               \label{fig:cavity_tube_int}
   \end{figure}\vspace{-1cm}
 
@@ -277,9 +277,9 @@ When the cavity losses are comparable to the coupling rate between the counterpr
 &\left| g_{cw,ccw} \right| = \left| g_{ccw,cw} \right| \rightarrow f g \\
 &\left| g_{cw,cw} \right| \rightarrow f^2 g
 \end{align*}
-Because the amplitudes ratio depend on the coupling rates themselves, a complete correction should be calculated iteratively. As a first step, we assume to have a closed system ($g_{k,k'}^{(1)} = g_{k,k}$, where in the experiment we extracted coupling rate under this assumption). From this result we calculated the ratio between the amplitudes of the counterpropagating fields, plug it back into the coupling rate $g_{k,k'}^{(2)} = fg_{k,k}$ (and extracted a corrected coupling rate). This was repeated until the two values converged, $g_{k,k'}^{(n+1)} = g_{k,k'}^{(n)}$.
+Because the amplitudes ratio depend on the coupling rates themselves, a complete correction should be calculated iteratively. As a first step, we assume to have a closed system $g_{k,k'}^{(1)} = g_{k,k}$ (where in the experiment we extracted coupling rate under this assumption), calculate the ratio between the amplitudes of the counterpropagating fields, and plug it back into the coupling rate $g_{k,k'}^{(2)} = fg_{k,k}$ (and extract the corrected coupling rate). This is repeated until the two values converged, $g_{k,k'}^{(n+1)} = g_{k,k'}^{(n)}$.
 
-When the size of the nanoparticle is not negligible compared to the standing-wave pattern length, it interacts simultaneously with its different regions. This effect taken into account by assuming the coupling rate of the nanoparticle is the integral of the coupling rate per unit length over its width, which effectively can be seen as the convolution of the nanoparticle with the standing wave. For example, if we assume to have a square overlap region, as for the nanotube case, the correction will result in (Supporting information):
+When the size of the nanoparticle is not negligible compared to the standing-wave pattern length, it interacts simultaneously with its different regions. This effect taken into account by assuming the coupling rate of the nanoparticle is the integral of the coupling rate per unit length over its width, which effectively can be seen as the convolution of the nanoparticle with the standing wave. For example, if we assume to have a square overlap region, as for the nanotube case, the correction will have the form of (see Supporting information):
 \begin{equation}
 g_{k,k'} \rightarrow \frac{\sin{\left( wk \right)}}{wk} g_{k,k'}
 \end{equation}
@@ -355,12 +355,11 @@ We can fully characterize a uniaxial particle (single \ce{WS_2} nanotube) solemn
     \textbf{b,} Summary of the measured $R_{re}=0.38$, $R_{im}=0.12$, $R_{im/re}^{||}=0.5$ and $R_{im/re}^{\perp}=0.16$ polarizability ratios on top of a TEM (Transmission electron microscope) image of a typical \ce{WS_2} nanotube as  used in our work. The scale-bar of the TEM image of the nanotube is $10nm$.}
 \label{fig:TM_width_splitting}
 \end{figure}
-
 The induced normalized splitting of the TM mode according to our theoretical model is:
 \begin{equation}\label{eq:delta_omega_approxTM}
          \frac{\Delta \omega}{S\omega} = \frac{\sqrt{g^2 + g_{cp}^2 + 2 g h \cos{2 k x} - 2 g_{cp} h \sin{2 k x} + h^2}-h}{g_{k,k}}
 \end{equation}
-The expression to normalized induced broadening is given in the Supplementary material.
+The expression to normalized induced broadening is given in the Supporting information.
 The fitted parameters from the two fits in Fig.~\ref{fig:TM_width_splitting} are:
 \begin{equation}\label{eq:fitting_parameters}
   \begin{split}
@@ -379,7 +378,7 @@ where the error range marks the standard errors of the fits.
 
 \subsection{Extraction of the polarizability ratios}
 
-\textbf{Polarizability ratios definition.} Our goal is to characterize of a non-spherical particle by measuring the polarizability ratios between the different components of the polarizability tensor. The polarizability ratios are often used to characterize non-spherical structures such as carbon nanotubes~\cite{rao2000polarized,reich2000comment,wang2004receiving} or various inorganic nanotubes, such as \ce{WS_2} nanotubes~\cite{tenne2005orientation,yang2008phototransistors} and are defined here as well. The polarizability ratios are defined by:
+\textbf{Polarizability ratios definition.} Our goal is to characterize of a non-spherical particle by measuring the polarizability ratios between the different components of the polarizability tensor. The polarizability ratios are often used to characterize non-spherical structures such as carbon nanotubes~\cite{rao2000polarized,reich2000comment,wang2004receiving} or various inorganic nanotubes, such as \ce{WS_2} nanotubes~\cite{tenne2005orientation,yang2008phototransistors} and are defined here as well,
 \begin{equation}\label{ratio_definitions}
 \begin{split}
    R_{re}  &= \frac{\alpha^{re}_{\perp}}{\alpha^{re}_{||}}; ~~~~~~~~~
@@ -390,16 +389,16 @@ where the error range marks the standard errors of the fits.
 \end{equation}
 Three of these ratios dictate the fourth.
 
-Using the fitted normalized induced splitting (eq.~\ref{eq:delta_omega_approxTM}) and the known orientation of the nanotube we extract $R_{re}$, and similarly $R_{im}$ is extracted from the fit to the normalized difference in broadening.
+\textbf{Measured and Calculated polarizability ratios.} In the following discussion we address in detail each of the polarizability ratios, $R_{re}$, $R_{im}$, $R_{im/re}^{||}$ and $R_{im/re}^{\perp}$.
+
+Using the fitted parameters and the known orientation of the nanotube we calculate $R_{re}$, and $R_{im}$.
 The ratio between the real and imaginary parts of the polarizability $R_{im/re}^{||}$
-is obtained from the ratio between the average shift to the average broadening: $\frac{\textit{S} \omega} {\textit{S} \Gamma}$ where $\textit{S} \Gamma= \gamma_{t,k,k}=\gamma_{s,k,k}+\gamma_{a,k,k}$. However, in our case,  the cross section for scattering is small, hence the ratio becomes simply:
+is obtained from the ratio between the average shift to the average broadening: $\frac{\textit{S} \omega} {\textit{S} \Gamma}$ where $\textit{S} \Gamma= \gamma_{t,k,k}=\gamma_{s,k,k}+\gamma_{a,k,k}$. However, in our case,  the cross section for scattering is small, hence the ratio becomes simply (for full expressions see supporting information):
 \begin{equation}\label{eq:Rre_im_noscatt}
-   \frac{\textit{S} \omega} {\textit{S} \Gamma}=\frac{g_{k,k}}{\gamma_{a,k,k}}\approx \frac{Re ( \alpha_{||} )}{Im (\alpha_{||})} = R_{im/re}^{||}
+   \frac{\textit{S} \omega} {\textit{S} \Gamma} \approx \frac{g_{k,k}}{\gamma_{a,k,k}} \propto \frac{Re ( \alpha_{||} )}{Im (\alpha_{||})} = R_{im/re}^{||}
 \end{equation}
 
-\textbf{Measured polarizability ratios.}
-
-In the following discussion we address in detail each of the polarizability ratios, $R_{re}$, $R_{im}$, $R_{im/re}^{||}$ and $R_{im/re}^{\perp}$. We approximate the end of the nanotube that enters the optical mode by a prolate ellipsoid and calculate the polarizability of an ellipsoid~\cite{hulst1957light}. We use the measured diameter of the nanotube $58nm \pm 2nm$. The exact length of the nanotube inside the mode is not well-defined so we make our calculations assuming an ellipsoid with a varying length. The ellipsoid length corresponds to the overlap of the nanotube with the optical mode (overlap length).  The permittivities that are used for the calculations are $\epsilon_{||}=14.26-i0.55$ and $\epsilon_{\perp}=10.3-i0.2$~\cite{taverna2002}. The measured and calculated polarizability ratios for the nanotube are presented in table \ref{tbl:PR}.
+For the calculation of the ratio values, we approximate the end of the nanotube that enters the optical mode by a prolate ellipsoid and calculate the polarizability of an ellipsoid~\cite{hulst1957light}. We use the measured diameter of the nanotube $58nm \pm 2nm$. The exact length of the nanotube inside the mode is not well-defined so we make our calculations assuming an ellipsoid with a varying length. The ellipsoid length corresponds to the overlap of the nanotube with the optical mode (overlap length).  The permittivities that are used for the calculations are $\epsilon_{||}=14.26-i0.55$ and $\epsilon_{\perp}=10.3-i0.2$~\cite{taverna2002}. The measured and calculated polarizability ratios for the nanotube are presented in table \ref{tbl:PR}.
 
 \begin{table}[H]
   \caption{Summery of measured and calculated polarizability ratios}
@@ -418,18 +417,17 @@ In the following discussion we address in detail each of the polarizability rati
   \textsuperscript{\emph{a}} See supporting information.
 \end{table}
 
-Fig.~\ref{fig:pol_ratios}a presents the comparison of the measured value for the ratio between the real parts of the polarizability $R_{re}$, (blue dot) to the calculated value of $R_{re}$ ratio vs. the overlap length(blue curve). The estimated overlap length in our measurement is $130nm$, which is given by our FEM simulation in COMSOL (see methods).
-For comparison the dashed black curve in Fig~\ref{fig:pol_ratios}.a represents the polarizability ratio for bulk \ce{WS_2}.
+Fig.~\ref{fig:pol_ratios}a presents the comparison of the measured value for the ratio between the real parts of the polarizability $R_{re}$, (blue dot) to the calculated value of $R_{re}$ ratio vs. the overlap length(blue curve). The estimated overlap length in our measurement is $130nm$, which is given by our FEM simulation in COMSOL.
+For comparison the dashed black curve in Fig~\ref{fig:pol_ratios}b represents the polarizability ratio for bulk \ce{WS_2}.
 
-The ratio $R_{re}=0.16\pm0.05$ of a single suspended nanotube was measured previously in the far-field regime, using Raman spectroscopy~\cite{tenne2005orientation} (green dot in Fig.~\ref{fig:pol_ratios}a). In that work an individual multiwalled \ce{WS_2} nanotube with an outer diameter of $15-25nm$ was placed on an Atomic force microscope (AFM) tip and illuminated with linearly polarized light ($633nm$) at different angles to the axis of the nanotube. The overlap length corresponds to the spot size of $\sim1um$ that was used.
+The ratio $R_{re}=0.16\pm0.05$ of a single suspended nanotube was measured previously in the far-field regime, using Raman spectroscopy~\cite{tenne2005orientation} (green dot in Fig.~\ref{fig:pol_ratios}b). In that work an individual multiwalled \ce{WS_2} nanotube with an outer diameter of $15-25nm$ was placed on an Atomic force microscope (AFM) tip and illuminated with linearly polarized light ($633nm$) at different angles to the axis of the nanotube. The overlap length corresponds to the spot size of $\sim1um$ that was used.
 The green dash-dot curve in Fig.~\ref{fig:pol_ratios}a represents the calculated $R_{re}$ for a nanotube with an outer diameter of $25nm$ at a wavelength of $633$nm.
 
 \begin{figure}[H]
 \centering
-   \includegraphics[width=0.475\textwidth]{Images/Rre_semilog_NT91A.png}\\
-   \includegraphics[width=0.475\textwidth]{Images/Rim_semilog_NT6_a1.png}\\
-   \includegraphics[width=0.475\textwidth]{Images/R_re_im_with_scattering.png}
-   \caption{\textbf{The calculated and the measured polarizability ratios of the \ce{WS_2} nanotube.} \textbf{a,} The calculated ratio between the real parts of the polarizabilities $R_{re}$ of a \ce{WS_2} nanotube vs. the overlap length between the nanotube and the optical mode (blue curve) (See Methods). The measured polarizability ratios are shown: The first (blue circle) $0.38 \pm 0.05$ is measured in our experiment and the second (green circle) $0.16.\pm0.05$ was measured previously for a similar type of nanotubes at a wavelength of 633nm~\cite{tenne2005orientation}. The green dash-dot curve is the calculated polarizability ratio for a $25nm$ outer diameter nanotube illuminated with $633nm$ light. The dashed black curve represents the polarizability ratio for bulk-\ce{WS_2}. \textbf{b,} The calculated ratio between the imaginary parts of the polarizabilities $R_{im}$ of a \ce{WS_2} nanotube vs. the overlap length between the nanotube and the optical mode assuming effective permittivity (blue curve) and when taking the normal one (dotted curve). The measured imaginary parts polarizability ratio is shown to be in good agreement with the curve plotted using the corrected effective permittivity (blue circle). \textbf{c,}}
+   \includegraphics[width=0.5\textwidth]{Images/Rre_semilog_NT91A.png}\\
+   \includegraphics[width=0.5\textwidth]{Images/Rim_semilog_NT6_a1.png}
+   \caption{\textbf{The calculated and the measured polarizability ratios of the \ce{WS_2} nanotube.} \textbf{a,} The calculated ratio between the real parts of the polarizabilities $R_{re}$ of a \ce{WS_2} nanotube vs. the overlap length between the nanotube and the optical mode (blue curve). The measured polarizability ratios are shown: The first (blue circle) $0.38 \pm 0.05$ is measured in our experiment and the second (green circle) $0.16.\pm0.05$ was measured previously for a similar type of nanotubes at a wavelength of 633nm~\cite{tenne2005orientation}. The green dash-dot curve is the calculated polarizability ratio for a $25nm$ outer diameter nanotube illuminated with $633nm$ light. The dashed black curve represents the polarizability ratio for bulk-\ce{WS_2}. \textbf{b,} The calculated ratio between the imaginary parts of the polarizabilities $R_{im}$ of a \ce{WS_2} nanotube vs. the overlap length between the nanotube and the optical mode assuming effective permittivity (blue curve) and when taking the normal one (dotted curve). The measured imaginary parts polarizability ratio is shown to be in good agreement with the curve plotted using the corrected effective permittivity (blue circle).}
 \label{fig:pol_ratios}
 \end{figure}
 
@@ -470,6 +468,23 @@ We believe that this work sets the grounds for three-dimensional label free sens
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{suppinfo}
 
+\textbf{Full expressions.}
+The full expression for $D_1D_2$:
+\begin{align*}
+D_1D_2 &= g_{k,k}g_{k,k}^{\dagger} + h \left( g_{k,k'} + g_{k,k'}^{\dagger} \right) + h^2 \\ &-\gamma_{t,k,k}\gamma_{t,k,k}^{\dagger} - i\left( g_{k,k'}\gamma_{t,k,k'}^{\dagger} + g_{k,k'}^{\dagger}\gamma_{t,k,k'}\right) - ih \left( \gamma_{t,k,k'} + \gamma_{t,k,k'}^{\dagger}\right)
+\end{align*}
+where: $g_{k,k'}^{\dagger} = g_{k',k}$.\\
+The approximated broadening change for the TE (linear) polarization:
+\begin{equation*}
+\Delta \Gamma = -\gamma \frac{g + h \cos{\left( 2 k x \right)}}{\sqrt{g^2 + 2gh\cos{\left( 2 k x \right)} + h^2}}
+\end{equation*}
+where we defined: $g_{k,k'} = g e^{-i \Delta \beta_{k,k'} x}$ and $gamma = \left| \gamma_{k,k'} \right|$.\\
+The approximated broadening change for the TM (elliptical) polarization:
+\begin{equation*}
+\Delta \Gamma = add
+\end{equation*}
+where we defined: $g_{k,k'} = \left(g \pm g_{cp} \right) e^{-i \Delta \beta_{k,k'} x}$.
+
 \textbf{Experimental.} We choose the fundamental modes of a Silica microtoroidal cavity at the wavelength of $\sim740nm$ and characterize their polarization (TE or TM) using a side view CCD camera.
 The spectrum measurement is performed with a fiber-coupled microtoroid that is placed inside a scanning electron microscope (SEM) chamber that was modified to have an optical fiber feedthrough. A $\ce{WS_2}$ nanotube is brought close to the surface of the microtoroid and placed at the equatorial level, perpendicularly to the surface.
 
@@ -491,6 +506,7 @@ where,
 &C_{\parallel}^{k,k} \;\:\! = d^2 \sin^2{\theta} \left[(c+1)^2 \sin^2{\phi} + \cos^2{\phi}\right]\\
 &C_{\perp}^{k,k} \;\:\! = d^2 \left\{ \cos^2{\phi} \left[ \right( 1 + c \left)^2 + \cos^2{\theta} \right] + \sin^2{\phi} \left[ \right( 1 + c \left)^2 \cos^2{\theta} + 1 \right] \right\}
 \end{align*}
+and $d$ and $c$ define the polarization of the optical mode: $\varepsilon_{cw} = d \left(\varepsilon_y + i \varepsilon_x \right) +dc\varepsilon_y$.
 
 \textbf{Open-system factor.} The asymmetry between the field amplitudes of the clockwise and counter-clockwise modes can be estimated by taking the steady-state solution of the equations of motion.
 \begin{equation*}
@@ -501,9 +517,9 @@ For a bare-cavity it takes the form of:
 f = \frac{\left| a_{cw} \right|}{\left| a_{ccw} \right|} =  \frac{h}{\left| i \Delta - \kappa_t \right|} 
 \end{equation*}
 
-\textbf{Finite size effect.} In order to account for the finite size of the nanoparticle inside the optical mode we assume that the coupling rate $g$ of a large particle are being a summation over the rates per unit length, $\tilde{g}$.
+\textbf{Finite size effect.} In order to account for the finite size of the nanoparticle inside the optical mode we assume that the coupling rate $g$ of a large particle are being a summation over the rates per unit length, $\hat{g}$.
 \begin{equation*}
-g = w\tilde{g}
+g = w\hat{g}
 \end{equation*}
 where $w$ is the size of the particle-cavity mode overlap.
 \begin{equation*}
@@ -511,8 +527,25 @@ where $w$ is the size of the particle-cavity mode overlap.
 \end{equation*}
 which is effectively the convolution between the particle and the normal modes
 \begin{equation*}
-g_{k,k'} = w \tilde{g}_{k,k'} \frac{\sin{wk}}{wk} = g_{k,k'} \frac{\sin{wk}}{wk}
+g_{k,k'} = w \hat{g}_{k,k'} \frac{\sin{wk}}{wk} = g_{k,k'} \frac{\sin{wk}}{wk}
 \end{equation*}
+
+\textbf{Extraction of the polarizability ratios.} The polarizability ratios where extracted using the following expressions, which for the loss components assume small scattering cross section.
+\begin{equation*}
+\tilde{g} = \frac{C_{\parallel,re}^{k,k'} + R_{Re}C_{\perp,re}^{k,k'}}{C_{\parallel,re}^{k,k} + R_{Re}C_{\perp,re}^{k,k}}
+\end{equation*}
+\begin{equation*}
+\tilde{\gamma} = \frac{C_{\parallel,re}^{k,k'} + R_{Im}C_{\perp,re}^{k,k'}}{C_{\parallel,re}^{k,k} + R_{Im}C_{\perp,re}^{k,k}}
+\end{equation*}
+\begin{equation*}
+\frac{g_{k,k}}{\gamma_{a,k,k}} = R^{\parallel}_{im/re} \frac{C_{\parallel,re}^{k,k} + R_{Re}C_{\perp,re}^{k,k}}{C_{\parallel,re}^{k,k} + R_{Im}C_{\perp,re}^{k,k}}
+\end{equation*}
+The following figure represents the scattering and absorption contributions.
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\textwidth]{Images/R_re_im_with_scattering.png}
+\caption{}
+\end{figure}
 
 \end{suppinfo}
 
