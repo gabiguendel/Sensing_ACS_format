@@ -63,7 +63,7 @@
 {AMOS and Department of Chemical and Biological Physics, Weizmann Institute of Science, 76100 Rehovot, Israel}
 \email{gabriel.guendelman@weizmann.ac.il}
 \phone{+972 (0)8 9343673}
-%\fax{+123 (0)123 4445557}
+%%\fax{+123 (0)123 4445557}
 \author{Yulia Lovsky}
 \affiliation[First University]
 {AMOS and Department of Chemical and Biological Physics, Weizmann Institute of Science, 76100 Rehovot, Israel}
@@ -269,6 +269,21 @@ The loss rate is the sum of the absorption loss rate $\gamma_a$, which is propor
               \label{fig:cavity_tube_int}
   \end{figure}\vspace{-1cm}
 
+\subsection{Open-system and particle size effects}
+
+When the cavity losses are comparable to the coupling rate between the counterpropagating modes the spectrum has the shape of a not fully resolved doublet and the average steady-state amplitudes of the different modes are not equal in-contrary to the closed system approximation. The asymmetry between the field amplitudes results in an asymmetry in the coupling rates, which leads to a decrease of the modulation-depth of the signal. This asymmetry can be estimated by calculating the ratio of the modes steady-state amplitudes ($f$, see supporting information) and using it to correct the appropriate coupling-rates. For example, in the case of light feed into the counterclockwise mode, the corrections will be:
+\begin{align*}
+&\left| g_{ccw,ccw} \right| = g \\
+&\left| g_{cw,ccw} \right| = \left| g_{ccw,cw} \right| \rightarrow f g \\
+&\left| g_{cw,cw} \right| \rightarrow f^2 g
+\end{align*}
+Because the amplitudes ratio depend on the coupling rates themselves, a complete correction should be calculated iteratively. As a first step we assume to have a closed system ($g_{k,k'}^{(1)} = g_{k,k}$, where in the experiment we extracted coupling rate under this assumption). From this result we calculated the ratio between the amplitudes of the counterpropagating fields, plug it back into the coupling rate $g_{k,k'}^{(2)} = fg_{k,k}$ (and extracted a corrected coupling rate). This was repeated until the two values converged, $g_{k,k'}^{(n+1)} = g_{k,k'}^{(n)}$.
+
+When the size of the nanoparticle is not negligible compared to the standing-wave pattern length, it interacts simultaneously with its different regions. This effect taken into account by assuming the coupling rate of the nanoparticle is the integral of the coupling rate per unit length over its width, which effectively can be seen as the convolution of the nanoparticle with the standing wave. For example, if we assume to have a square overlap region, as for the nanotube case, the correction will result in (Supporting information):
+\begin{equation}
+g_{k,k'} \rightarrow \frac{\sin{\left( wk \right)}}{wk} g_{k,k'}
+\end{equation}
+
 \section{Methods}
 
 \subsection{Calculation: sensing of a spherical particle with different WGM polarizations}
@@ -280,7 +295,7 @@ In Fig.~\ref{fig:TETMcompare}c we show the case of elliptically polarized TM mod
 \begin{figure}[H]
 \centering
                 \includegraphics[trim=0.0cm 0.0cm 0.0cm 0.0cm, clip, width=0.95\textwidth]{Images/TMspherical_modified_3.png}\quad
-             \caption{\textbf{Sensing of a spherical dielectric particle using the TM mode.} \textbf{a-c,} The spectral changes upon introduction of a spherical, $120nm$ in diameter, polystyrene nanoparticle inside the optical mode (for details see methods). The bare cavity spectrum (blue curve) is changed due to the presence of the particle (red curve) inside a linearly polarized mode (a). The induced spectral changes of a perfectly circularly polarized TM mode (b) and of typical TM mode with an elliptical polarization (c). \textbf{d-f,} show the shifts ($\delta \omega$) of the symmetric (red curves) and antisymmetric (black curves) normal modes as a function of the position of the particle on the equator (eq.~\ref{eq:splitting_broadening}) of the linearly (d), circularly (e) and elliptically (f) polarized TM vs. the position of the nanoparticle along the equator.  The induced splitting signal is given by subtraction between the red and the black curves in (d)-(f) (not shown). The average shift is shown with the dash blue lines and marked by \textit{S}$\omega$. \textbf{g-k,} Illustration of the pola
+             \caption{\textbf{Sensing of a spherical dielectric particle using the TM mode.} \textbf{a-c,} The spectral changes upon introduction of a spherical, $120nm$ in diameter, polystyrene nanoparticle inside the optical mode (for details see methods). The bare cavity spectrum (blue curve) is changed due to the presence of the particle (red curve) inside a linearly polarized mode (a). The induced spectral changes of a perfectly circularly polarized TM mode (b) and of typical TM mode with an elliptical polarization (c). \textbf{d-f,} show the shifts ($\delta \omega$) of the symmetric (red curves) and antisymmetric (black curves) normal modes as a function of the position of the particle on the equator (eq.~\ref{eq:splitting_broadening}) of the linearly (d), circularly (e) and elliptically (f) polarized TM vs. the position of the nanoparticle along the equator.  The induced splitting signal is given by subtraction between the red and the black curves in (d)-(f) (not shown). The average shift is shown with the dash blue lines and marked by \textit{S}$\omega$. \textbf{g-k,} Illustration of the different mode polarizations.
 						\label{fig:TETMcompare}}
 \end{figure}
 
@@ -289,12 +304,12 @@ In Fig.~\ref{fig:TETMcompare}c we show the case of elliptically polarized TM mod
 A $\ce{WS_2}$ nanotube with an outer diameter of $60nm$ is brought close to the surface of a silica microtoroid and placed at the equatorial level, perpendicularly to the surface with nanometer accuracy. This was possible by conducting the experiment in a customized SEM vacuum chamber (Fig. \ref{fig:experiment}a).
 While monitoring the exact position of the nanotube using the SEM, we measure the induced spectral shifts and broadening of the TE and TM polarized normal modes. These are then correlated to the polarizability tensor of the particle or its orientation.
 
-An example of a single-shot spectrum with the nanotube brought into the evanescent field of a microtoroidal WGM resonator is shown the red and blue curves in Fig. \ref{fig:experiment}c, respectively. Fig. \ref{fig:experiment}d shows the shift of the symmetric and asymmetric modes and the induced splitting (the difference between the shifts) of the nanotube brought in-and-out of the evanescent wave. The modulation of the nanotube position near the surface allows a repeatable measurement with and without the perturbation and an accurate estimation of the induced shifts and broadening of the normal modes.
+An example of a single-shot spectrum with the nanotube brought into the evanescent field of a microtoroidal WGM resonator is shown the red and blue curves in Fig. \ref{fig:experiment}c, respectively. Fig. \ref{fig:experiment}d shows the shift of the symmetric and asymmetric modes and the induced splitting (the difference between the shifts) of the nanotube brought in-and-out of the evanescent wave. The modulation of the nanotube position near the surface allows a repeatable measurement with and without the perturbation and an accurate estimation of the induced shifts and broadening of the normal modes. Note that in this specific position the counter-propagating coupling induced by the nanotube is opposite in sign to the intrinsic coupling $h$, and therefore decreases the overall measured splitting.
 
 \begin{figure}[H]
 \centering
           \includegraphics[width=0.95\textwidth]{Images/figure_3_v4.png}
-    \caption{\textbf{Measurement of the induced spectral changes.} \textbf{a,} Image of the experimental setup inside the SEM (Zeiss Supra\textsuperscript{TM}). \textbf{1,} SEM objective, \textbf{2,} Resonator chip positioned on a XYZ piezo-actuator Klocke Nanotechnik\textsuperscript{TM} , \textbf{3,} Home-built Nanofiber holder and stretcher mounted on the SEMs positioning system, \textbf{4,} Kleindiek\textsuperscript{TM} nano-manipulator on which the nanotip and nanotube are mounted, \textbf{5,} WGM silicon chip accommodating about 30 resonators. \textbf{b,} The tapered coupled microtoroid with a nanotip brought close to the microresonator surface. \textbf{Inset:} Close-up of the nanotube mounted on the nanotip near the resonators surface. \textbf{c,} A recorded spectra of the microtoroid with the nanotube outside (blue curve) and inside (red curve) the optical mode. The black curves are fits to a Lorentzian doublet. The bare cavity fitted parameters are: $h=29$MHz and $\kappa=28$MHz. \textbf{d,} The recorded center frequencies of the two normal modes and the splitting between them change in time. Top: The asymmetric normal mode center frequency. Center: The symmetric normal mode center frequency. Bottom: The resulting splitting. The blue circles mark the values when the nanotube is out of the mode (far) and the red circles mark the values when the nanotube is positioned inside the evanescent field, as close as possible to the surface without making contact. The induced splitting is twice of $\Delta \omega = 3.4$MHz. The average shift of the center frequency, $\textit S \omega$, is $10$MHz. This gives us a 'normalized induced splitting' of $0.34$, in this example. The presented signals of center frequency were corrected for a linear drift due to thermal effects. The splitting signal is the difference between the raw data of the central frequencies. Note that in this specific position the counter-propagating coupling induced by the nanotube is opposite in sign to the intrinsic coupling $h$, and therefore decreases the overall measured splitting.
+    \caption{\textbf{Measurement of the induced spectral changes.} \textbf{a,} Image of the experimental setup inside the SEM (Zeiss Supra\textsuperscript{TM}). \textbf{1,} SEM objective, \textbf{2,} Resonator chip positioned on a XYZ piezo-actuator Klocke Nanotechnik\textsuperscript{TM} , \textbf{3,} Home-built Nanofiber holder and stretcher mounted on the SEMs positioning system, \textbf{4,} Kleindiek\textsuperscript{TM} nano-manipulator on which the nanotip and nanotube are mounted, \textbf{5,} WGM silicon chip accommodating about 30 resonators. \textbf{b,} The tapered coupled microtoroid with a nanotip brought close to the microresonator surface. \textbf{Inset:} Close-up of the nanotube mounted on the nanotip near the resonators surface. \textbf{c,} A recorded spectra of the microtoroid with the nanotube outside (blue curve) and inside (red curve) the optical mode. The black curves are fits from which the center frequencies and widths were extracted. The bare cavity fitted parameters are: $h=29$MHz and $\kappa=28$MHz. \textbf{d,} The recorded center frequencies of the two normal modes and the splitting between them change in time. Top: The asymmetric normal mode center frequency. Center: The symmetric normal mode center frequency. Bottom: The resulting splitting. The blue circles mark the values when the nanotube is out of the mode (far) and the red circles mark the values when the nanotube is positioned inside the evanescent field, as close as possible to the surface without making contact. The induced splitting is twice of $\Delta \omega = 3.4$MHz. The average shift of the center frequency, $\textit S \omega$, is $10$MHz. This gives us a 'normalized induced splitting' of $0.34$, in this example. The presented signals of center frequency were corrected for a linear drift due to thermal effects. The splitting signal is the difference between the raw data of the central frequencies.
 		\label{fig:experiment}}
 \end{figure}
 
@@ -302,18 +317,18 @@ An example of a single-shot spectrum with the nanotube brought into the evanesce
 
 \subsection{Induced spectral changes of the TE mode vs. the position along the equator}
 
-In our theoretical model we derive the new eigenfrequencies of the cavity with a non-spherical nanoparticle and arrive to the normalized induced splitting vs. the position along the equator (For full expression see Supplementary Material). for the TE mode in the parametric regime: $h\gg g, \gamma$, we can use the following approximated expression:
+In our theoretical model we derive the new eigenfrequencies of the cavity with a non-spherical nanoparticle and arrive at the normalized induced splitting vs. the position along the equator (For full expression, see Supporting information). for the TE mode in the limit of: $h\gg g, \gamma$, we can use the following approximated expression:
 \begin{equation}
 \frac{\Delta \omega_{TE}}{S\omega}  \approx \frac{1}{g_{k,k}}(\sqrt{ g^2 + 2  g h \cos{2 k x}  + h^2}-h)
 \label{eq: delta_omega_approxTE}
 \end{equation}
 where the average shift is: $\textit{S}\omega=g_{k,k}$.
-Note that the approximated expression for $\Delta \omega_{TE} $ (Eq.~\ref{eq: delta_omega_approxTE}) is consistent with previous works~\cite{he2013statistics}, where it was used to describe the interaction of a linearly polarized optical mode, without initial intrinsic splitting, with two isotropic spherical particles
+Note that the approximated expression for $\Delta \omega_{TE} $ (Eq.~\ref{eq: delta_omega_approxTE}) is consistent with previous work~\cite{he2013statistics}, where it was used to describe the interaction of a linearly polarized optical mode, without initial intrinsic splitting, with two isotropic spherical particles.
 
 \begin{figure}[H]
 \centering
    \includegraphics[width=0.95\textwidth]{Images/data_plot_19_TE_forPaper_subplot1C.png}
-        \caption{\textbf{Scan results of a TE mode and demonstration of the self-referenced method and open system nature.} (a) The measured half induced splitting between the normal modes of the TE mode vs. the position of the nanotube along the equator. The blue curve is the theoretical prediction of $\Delta \omega$ using the interpolated line (dashed blue line in (c)) from $\textit{S}\omega$ measured data. (b) The measured average shift $\textit{S}\omega$ of the two normal modes in the same measurement. (c) The normalized induced splitting data (the red circles) along with three options for a fit. The light red curve represents the fit to eq.~\ref{eq: delta_omega_approxTE} with the backscattering between the counterpropagating modes being symmetric. This represents the case where the coupling rate between the counterpropagating modes and the coupling rate into the same mode are equal. The light dashed red curve represents an improved fit, where the reference to the size of the particle is included in the model. The dark red solid curve is the best fit to the expression in eq.~\ref{eq: delta_omega_approxTE}, where both the particle size and open system nature is taken into account.}
+        \caption{\textbf{Scan results of a TE mode and demonstration of the self-referenced method and open system nature.} (a) The measured half induced splitting between the normal modes of the TE mode vs. the position of the nanotube along the equator. The blue curve is the theoretical prediction of $\Delta \omega$ using the interpolated line (dashed blue line in (b)) from $\textit{S}\omega$ measured data. (b) The measured average shift $\textit{S}\omega$ of the two normal modes in the same measurement. (c) The normalized induced splitting data (the red circles) along with three options for a fit. The light red curve represents the fit to eq.~\ref{eq: delta_omega_approxTE} with the backscattering between the counterpropagating modes being symmetric. This represents the case where the coupling rate between the counterpropagating modes and the coupling rate into the same mode are equal, i.e., $g_{k,k'} = g_{k,k}$. The light dashed red curve represents an improved fit, where the reference to the size of the particle is included in the model. The dark red solid curve is the best fit to the expression in eq.~\ref{eq: delta_omega_approxTE}, where both the particle size and open system nature is taken into account.}
 \label{fig:TE_set19_splitting}
 \end{figure}
 
@@ -321,11 +336,11 @@ In the experiment, we scan the nanotube positioning along the equator while it i
 
 The induced splitting and the induced average shift of the TE normal modes vs. the position along the equator are plotted in Fig.~\ref{fig:TE_set19_splitting}a,b. The blue circle markers represent the measured data: half the splitting ($\Delta \omega$) and the average shift ($\textit{S} \omega$) and the blue curves are guide to the eye (using the non-approximated expression: $\Delta\omega = \frac{1}{2}Re\{\delta\omega_- -\delta\omega_+\}-h$.).
 
-From these results, we can extract the real part of the polarizability along a single axis. In the current configuration the TE field probes the short axis of the nanotube, giving $\mathcal{R}e(\alpha_{\perp})$. To estimate the polarizability we can use the measured average induced shift ($S\omega = (2.7 \pm 0.85$)MHz in the current experiment) or the coupling rate between the counterpropagating modes from fit to the ($\Delta \omega$) data. However, these measurements also depend on the parameters of the optical mode, such as the mode volume and the exact position of the nanotube inside the evanescent field in the radial direction, which are sometimes hard to evaluate. For example, we see (Fig.~\ref{fig:TE_set19_splitting}b) that although the average shift signal $S\omega$ is not supposed to be modulated with the position on the equator, we still observe its variations. The same dependence on the mode properties exists in the induced splitting signal.
+From these results, we can extract the real part of the polarizability along a single axis. In the current configuration, the TE field probes the short axis of the nanotube, giving $\mathcal{R}e(\alpha_{\perp})$. To estimate the polarizability, we can the average induced shift ($S\omega = (2.7 \pm 0.85$)MHz in the current experiment) or the coupling rate between the counterpropagating modes from fit to the ($\Delta \omega$) data. However, these measurements also depend on the parameters of the optical mode, such as the mode volume and the exact position of the nanotube inside the evanescent field in the radial direction, which are sometimes hard to evaluate. For example, we see (Fig.~\ref{fig:TE_set19_splitting}b) that although the average shift signal $S\omega$ is not supposed to be modulated with the position on the equator, we still observe its variations. The same dependence on the mode properties exists in the induced splitting signal.
 
 To cancel out this position-dependent variation and to overcome the randomness of the nanotube positioning within the standing wave pattern, we propose here a method for a self-referenced measurement that involves normalizing of the induced splitting, $2\Delta\omega$, with the induced total shift, $2S\omega$. This ratio, taken at each measurement point, is plotted in Fig.~\ref{fig:TE_set19_splitting}c along with three types of fits to the data.
 
-The strength of the model is demonstrated by first plotting the fit according to the expression that assumes a closed system approximation and does not take into account the size of the particle relative to the standing wave pattern (light red). This fit has a modulation depth of one, as the coupling rate between the counterpropagating modes and the coupling rate into the same mode are equal. ($g_{k,k}=g$ in eq.~\ref{eq: delta_omega_approxTE}). We see that this curve does not describe the measured data. Second, we plot the fit that takes into account that the diameter of the nanotube is $60nm$ and the periodicity of the standing wave is $\sim 250nm$, for the wavelength of $\sim740nm$ (dash red). This reduces the modulation depth to $0.9$. Lastly, we plot the fit that takes into account both the size of the particle and that the approximation to a closed system does not describe the system accurately and the standing wave pattern has a traveling component (solid dark red). In this case, the modulation depth is only $\sim0.6$. This demonstrates that these aspects, that we introduced into our model, influence drastically (could be by $40\%$) the accuracy of the particle characterization and sizing.
+The strength of the model is demonstrated by first plotting the fit according to the expression that assumes a closed system approximation and does not take into account the size of the particle relative to the standing wave pattern (light red). This fit has a modulation depth of one, as the coupling rate between the counterpropagating modes and the coupling rate into the same mode are equal ($g_{k,k'}=g_{k,k}$ in eq.~\ref{eq: delta_omega_approxTE}). We see that this curve deviates from the measured data. Secondly, we plot a fit that takes into account that the diameter of the nanotube is $60nm$ and the periodicity of the standing wave is $\sim 250nm$, for the wavelength of $\sim740nm$ (dash red). This reduces the modulation depth to $0.9$. Last, we plot the fit that takes into account both the size of the particle and that the approximation to a closed system does not describe the system accurately and the standing wave pattern has a traveling component (solid dark red). In this case, the modulation depth is only $\sim0.6$. This demonstrates that these aspects, that we introduced into our model, influence drastically (could be by $40\%$) the accuracy of the particle characterization and sizing.
 
 \subsection{Characterization of a uniaxial particle using the TM mode}
 
@@ -376,8 +391,8 @@ where the error range marks the standard errors of the fits.
 Three of these ratios dictate the fourth.
 
 Using the fitted normalized induced splitting (eq.~\ref{eq:delta_omega_approxTM}) and the known orientation of the nanotube we extract $R_{re}$, and similarly $R_{im}$ is extracted from the fit to the normalized difference in broadening.
-The ratio between the real and the imaginary parts of the polarizability $R_{im/re}^{||}$
-is obtained from the ratio between the average shift to the average broadening: $\frac{\textit{S} \omega} {\textit{S} \Gamma}$ where $\textit{S} \Gamma= \gamma_{t,k,k}=\gamma_{s,k,k}+\gamma_{a,k,k}$. However, in our case  the cross section for scattering is small, hence the ratio becomes simply:
+The ratio between the real and imaginary parts of the polarizability $R_{im/re}^{||}$
+is obtained from the ratio between the average shift to the average broadening: $\frac{\textit{S} \omega} {\textit{S} \Gamma}$ where $\textit{S} \Gamma= \gamma_{t,k,k}=\gamma_{s,k,k}+\gamma_{a,k,k}$. However, in our case,  the cross section for scattering is small, hence the ratio becomes simply:
 \begin{equation}\label{eq:Rre_im_noscatt}
    \frac{\textit{S} \omega} {\textit{S} \Gamma}=\frac{g_{k,k}}{\gamma_{a,k,k}}\approx \frac{Re ( \alpha_{||} )}{Im (\alpha_{||})} = R_{im/re}^{||}
 \end{equation}
@@ -403,10 +418,10 @@ In the following discussion we address in detail each of the polarizability rati
   \textsuperscript{\emph{a}} See supporting information.
 \end{table}
 
-Fig.~\ref{fig:pol_ratios}a presents the comparison of the measured value for the ratio between the real parts of the polarizability $R_{re}$, (blue dot) to the calculated value of $R_{re}$ ratio vs. the overlap length(blue curve). The estimated overlap length in our measurement is $130nm$, which is given by our FEM simulation in Comsol (see methods).
+Fig.~\ref{fig:pol_ratios}a presents the comparison of the measured value for the ratio between the real parts of the polarizability $R_{re}$, (blue dot) to the calculated value of $R_{re}$ ratio vs. the overlap length(blue curve). The estimated overlap length in our measurement is $130nm$, which is given by our FEM simulation in COMSOL (see methods).
 For comparison the dashed black curve in Fig~\ref{fig:pol_ratios}.a represents the polarizability ratio for bulk \ce{WS_2}.
 
-The ratio $R_{re}=0.16\pm0.05$ of a single suspended nanotube was measured previously in the far-field regime, using Raman Spectroscopy~\cite{tenne2005orientation} (green dot in Fig.~\ref{fig:pol_ratios}a). In that work an individual multiwalled \ce{WS_2} nanotube with an outer diameter of $15-25nm$ was placed on an AFM tip and illuminated with linearly polarized light ($633nm$) at different angles to the axis of the nanotube. The overlap length corresponds to the spot size of $\sim1um$ that was used.
+The ratio $R_{re}=0.16\pm0.05$ of a single suspended nanotube was measured previously in the far-field regime, using Raman spectroscopy~\cite{tenne2005orientation} (green dot in Fig.~\ref{fig:pol_ratios}a). In that work an individual multiwalled \ce{WS_2} nanotube with an outer diameter of $15-25nm$ was placed on an Atomic force microscope (AFM) tip and illuminated with linearly polarized light ($633nm$) at different angles to the axis of the nanotube. The overlap length corresponds to the spot size of $\sim1um$ that was used.
 The green dash-dot curve in Fig.~\ref{fig:pol_ratios}a represents the calculated $R_{re}$ for a nanotube with an outer diameter of $25nm$ at a wavelength of $633$nm.
 
 \begin{figure}[H]
@@ -418,7 +433,7 @@ The green dash-dot curve in Fig.~\ref{fig:pol_ratios}a represents the calculated
 \label{fig:pol_ratios}
 \end{figure}
 
-In Fig.~\ref{fig:pol_ratios}b, the measured ratio between the imaginary parts of the polarizability $ R_{im}$ is plotted (blue dot) along with the calculated ratio vs. the overlap length (blue solid curve). Note that in all our calculations for the polarizability along the short axis of the nanotube we use an effective value of permittivity: $\sqrt{\epsilon_{\perp}\epsilon_{||}}$~\cite{taverna2002,kociak2001experimental}. The reason is the fact that in the multiwall nanotube of such small radius ($\sim 30nm$) the principal crystallographic axis (defined perpendicular to the \ce{WS_2} sheets) changes rapidly on the scale of the nanostructure, thus both the in-plane and out-of-plane components of the dielectric tensor contribute to the out-of-plane polarizability calculation. The dash-dot blue curve in Fig.~\ref{fig:pol_ratios}b represents the calculated polarizability ratio without this adaptation. We see that indeed using the adapted value leads to a much better agreement. The dashed black curve represents the calculated value for the bulk-\ce{WS_2}.
+In Fig.~\ref{fig:pol_ratios}b, the measured ratio between the imaginary parts of the polarizability $ R_{im}$ is plotted (blue dot) along with the calculated ratio vs. the overlap length (blue solid curve). Note that in all our calculations for the polarizability along the short axis of the nanotube, we use an effective value of permittivity: $\sqrt{\epsilon_{\perp}\epsilon_{||}}$~\cite{taverna2002,kociak2001experimental}. The reason is the fact that in the multiwall nanotube of such small radius ($\sim 30nm$) the principal crystallographic axis (defined perpendicular to the \ce{WS_2} sheets) changes rapidly on the scale of the nanostructure, thus both the in and out-of-plane components of the dielectric tensor contribute to the out-of-plane polarizability calculation. The dash-dotted blue curve in Fig.~\ref{fig:pol_ratios}b represents the calculated polarizability ratio without this adaptation. We see that indeed using the adapted value leads to a much better agreement. The dashed black curve represents the calculated value for the bulk-\ce{WS_2}.
 
 We see that the in-plane ratio ($R_{im/re}^{||}$) for the \ce{WS_2} nanotube is $\sim12$ times larger than the ratio for bulk-\ce{WS_2}. The out-of-plane ratio ($R_{im/re}^{\perp}$) is $\sim106$ times larger than the bulk ratio. We believe this is attributed to the fact that the imaginary part of the permittivity is higher in the nanotube than in bulk, whereas there is a decrease of the real part. Specifically, the direct band-gap of bulk 2H-WS$_2$ is at $2.04$eV ($\lambda=608nm$)~\cite{wilson1969transition}, the indirect band-gap at $1.3$eV ($\lambda=954nm$)~\cite{ballif1999optical} and exciton A is at $1.95$eV ($\lambda=636nm$)~\cite{frey1998optical}. The optical absorption of nanotubes was believed to have the same features~\cite{frey1998optical} as the bulk. However, recent work~\cite{Yadgarov2016unique} proves the presence of both excitonic and plasmonic features. Namely, the nanotubes preserve their \ce{WS_2} bulk properties but also maintain a plasmonic resonance at $\sim 600nm$. Our illumination, at $735nm$, is detuned from all these transitions and the plasmonic resonance. Hence, we can assume that we measure the plasmonic off-resonance response, being red-detuned by $\sim135nm$ from the plasmon resonance center.
 Different loss mechanism contributes to the imaginary part of the dielectric function, and one of them might be oscillations of the free charge, a plasmon~\cite{Yadgarov2016unique}. This could explain the increased by an order of a magnitude imaginary part of the permittivity.
@@ -429,15 +444,13 @@ Another supporting recent work is by Levi at al.~\cite{levi2013}, which measured
 
 In this work, we present a model for light-matter interactions of arbitrarily shaped nano-object with linear (TE) or elliptical (TM) polarization optical modes. We then implement a measurement scheme that allows 3-D characterization and measurement of the polarizability ratios of arbitrarily shaped nano-object using a WGM microresonator. In particular, the spectral changes of the two normal modes of the TM mode induced by a presence of a \ce{WS_2} nanotube are correlated to its polarizability tensor and the polarizability ratios between the real parts, the imaginary parts and the imaginary to real parts of a single \ce{WS_2}  nanotube are measured. The measured polarizability ratios of the \ce{WS_2} nanotube are in accordance with the reported value~\cite{tenne2005orientation} and our estimation form the measured bulk properties.
 
-The presented model introduces important aspects that were often not taken into account such as the implementation for sensing with an open system configuration which is typical in the WGM sensing configurations. When the cavity losses ($\kappa$) are comparable to the coupling rate between the counterpropagating modes ($\textit{h}$) the spectrum has the shape of a not fully resolved doublet and the average steady-state amplitudes of the different modes are not equal in-contrary to the closed system approximation.
-
-In our model, we took this effect into account by applying an iterative calculation. As a first step we assumed to have a closed system ($g_{k,k'}^{(1)} = g_{k,k}$) an extracted the coupling rate by fitting. From this result we calculated the ratio between the amplitudes of the counterpropagating fields ($f$), plugin it back into the coupling rate $g_{k,k}^{(2)} = fg_{k,k}$ and preformed the fit again. This was repeated until the two values converged, $g_{k,k}^{(n+1)} = g_{k,k}^{(n)}$.
+The presented model introduces important aspects that were often not taken into account such as the implementation for sensing with an open system configuration which is typical in the WGM sensing configurations. \textbf{add some words}
 
 To support the proposed method we use the measurement of the nanotube with the TE mode. We show there could be tens of percents of deviation of the estimated coupling rate (and hence the polarizability) when the values are derived under the closed system approximation, and that the full model we propose corrects these deviations.
 
 Additionally, we demonstrate a complementary approach of a self-referenced measurement, which involves a normalization of the splitting or difference in broadening of the two normal modes by the average shift or average broadening of the two normal modes, respectively. In previous works \textbf{[add ref]}, where non-absorbing particle was used, the particle position and mode volume dependence, which are parameters that are hard to accurately predict, were eliminated by dividing the shift with the broadening signal $\delta \omega / \delta \Gamma$. Similarly to the $\delta \omega / \delta \Gamma$ method, the current $\delta \omega / \textit{S} \omega$ normalization technique also eliminates these dependencies. The importance of our method is in a system where the detected particle perturbs the standing wave pattern of the WGM microresonator or in a multiple particle detection that induces splitting. This is because the $\delta \omega / \textit{S} \omega$ measurement tells us where along the standing wave the particle landed. For example, in a measurement of a small nanoparticle of arbitrarily shape that perturbs a well resolved TE mode, $\delta \omega / \textit{S} \omega$ equals one, which tells us that the particle is positioned at a node of the symmetric standing wave pattern. This enables more accurate and less position-dependant, real-time sizing of the particle.
 
-The influence of the nanoparticle size compared to the standing wave pattern was also taken into consideration. This was evaluated by treating the nanoparticle contribution as the integral contributions over infinitesimally small particles along the size of the particle, which effectively can be seen as the convolution of the nanoparticle with the standing wave. For $60nm$ radius particle in a $740 nm$ wavelength, as for this work, we estimate the effect to be $\approx 9\% $ on the modulation depth.
+The influence of the nanoparticle size compared to the standing wave pattern was also taken into consideration. For $60nm$ radius particle in a $740 nm$ wavelength, as for this work, we estimate the effect to be $\approx 9\% $ on the modulation depth.
 In our work, we did not consider the influence of the evanescent field gradient over the nanoparticle as was presented in the recent work~\cite{foreman2017Whispering}. From this additional effect, we estimated to have an additional $6 \% $ decrease in the modulation depth that is still in corresponds with our experimental results.
 
 We believe that this work sets the grounds for three-dimensional label free sensing of arbitrarily shaped nanoparticles and could be implemented in various detection schemes. Such TE-TM measurements can be harnessed for structural characterization of nano-objects and the detailed measurement of various properties, such as chirality and conformational changes.
@@ -459,19 +472,19 @@ We believe that this work sets the grounds for three-dimensional label free sens
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{suppinfo}
 
-We choose the fundamental modes of a Silica microtoroidal cavity at the wavelength of $\sim740nm$ and characterize their polarization (TE or TM) using a side view CCD camera.
+\textbf{Experimental.} We choose the fundamental modes of a Silica microtoroidal cavity at the wavelength of $\sim740nm$ and characterize their polarization (TE or TM) using a side view CCD camera.
 The spectrum measurement is performed with a fiber-coupled microtoroid that is placed inside a scanning electron microscope (SEM) chamber that was modified to have an optical fiber feedthrough. A $\ce{WS_2}$ nanotube is brought close to the surface of the microtoroid and placed at the equatorial level, perpendicularly to the surface.
 
 The position of the nanotube near the surface is modulated by approximately $200nm$ peak-to-peak, enough to bring the nanotube in and out of the mode. The spectrum is recorded with the rate of $100$Hz, which is the frequency scan rate of the laser, at $1$MS/sec, which is the maximum sampling rate of our PCI card.
 
-Figure~\ref{fig:pol_ratios} the calculations of the polarizability ratios of the nanotube assume the following permittivities along its two axes: $\epsilon_{||}=14.26-i0.55$ and $\epsilon_{\perp}=10.3-i0.2$~\cite{taverna2002,kociak2001experimental} for the wavelength of $735nm$ and an ellipsoidal particle~\cite{hulst1957light}. The calculation of the polarizabilities of bulk-\ce{WS_2} assume $\epsilon_{||}=14.26-i0.55$ and $\epsilon_{\perp}=7.44-i0.0095$~\cite{taverna2002}.
+\textbf{Ellipsoid polarizability.} Figure~\ref{fig:pol_ratios} the calculations of the polarizability ratios of the nanotube assume the following permittivities along its two axes: $\epsilon_{||}=14.26-i0.55$ and $\epsilon_{\perp}=10.3-i0.2$~\cite{taverna2002,kociak2001experimental} for the wavelength of $735nm$ and an ellipsoidal particle~\cite{hulst1957light}. The calculation of the polarizabilities of bulk-\ce{WS_2} assume $\epsilon_{||}=14.26-i0.55$ and $\epsilon_{\perp}=7.44-i0.0095$~\cite{taverna2002}.
 
 Comsol simulations: The decay length of the TM field in the microtoroid that was used (major diameter $52um$, minor diameter $8um$) is $120nm$  (see inset in Fig.~\ref{fig:pol_ratios}a) and together with the orientation of the nanotube we get approximately $130nm$ of overlap.
 
-\textbf{$g_{cp}$ for a nanotube}
-\begin{equation}
+\textbf{$\mathbf{g}_{cp}$ for a nanotube}
+\begin{equation*}
 g_{k,k'} \propto \left[ \underbrace{C_{\parallel,re}^{k,k'} \operatorname{Re} \left[ \alpha_{\parallel} \right] + C_{\perp,re}^{k,k'} \operatorname{Re} \left[ \alpha_{\perp} \right]}_{g} \pm i \underbrace{C_{im} \left( \operatorname{Re} \left[ \alpha_{\parallel} \right] - \operatorname{Re} \left[ \alpha_{\perp} \right] \right)}_{g_{cp}} \right] e^{\pm 2 i k x} 
-\end{equation}
+\end{equation*}
 where,
 \begin{align*}
 &C_{\parallel,re}^{k,k'} \,= d^2 \sin^2{\theta} \left[(c+1)^2 \sin^2{\phi} - \cos^2{\phi}\right]\\
@@ -480,6 +493,28 @@ where,
 &C_{\parallel}^{k,k} \;\:\! = d^2 \sin^2{\theta} \left[(c+1)^2 \sin^2{\phi} + \cos^2{\phi}\right]\\
 &C_{\perp}^{k,k} \;\:\! = d^2 \left\{ \cos^2{\phi} \left[ \right( 1 + c \left)^2 + \cos^2{\theta} \right] + \sin^2{\phi} \left[ \right( 1 + c \left)^2 \cos^2{\theta} + 1 \right] \right\}
 \end{align*}
+
+\textbf{Open-system factor.} The asymmetry between the field amplitudes of the clockwise and counter-clockwise modes can be estimated by taking the steady-state solution of the equations of motion.
+\begin{equation*}
+f = \frac{\left| a_{cw} \right|}{\left| a_{ccw} \right|} =  \frac{\left| i\left( g_{cw,cw} + h\right) - \gamma_{cw,ccw}\right|}{\left| i \sqrt{D_1 D_2} - \left( \gamma_t + \kappa_t \right) \right|} 
+\end{equation*}
+For a bare-cavity it takes the form of:
+\begin{equation*}
+f = \frac{\left| a_{cw} \right|}{\left| a_{ccw} \right|} =  \frac{h}{\left| i \Delta - \kappa_t \right|} 
+\end{equation*}
+
+\textbf{Finite size effect.} In order to account for the finite size of the nanoparticle inside the optical mode we assume that the coupling rate $g$ of a large particle are being a summation over the rates per unit length, $\tilde{g}$.
+\begin{equation*}
+g = w\tilde{g}
+\end{equation*}
+where $w$ is the size of the particle-cavity mode overlap.
+\begin{equation*}
+\delta \omega_{\pm} \left(x_{pos}, w \right) = \frac{1}{w} \int_{x_{pos}-w/2}^{x_{pos}+w/2} \delta \omega_{\pm} \left(x \right)
+\end{equation*}
+which is effectively the convolution between the particle and the normal modes
+\begin{equation*}
+g_{k,k'} = w \tilde{g}_{k,k'} \frac{\sin{wk}}{wk} = g_{k,k'} \frac{\sin{wk}}{wk}
+\end{equation*}
 
 \end{suppinfo}
 
