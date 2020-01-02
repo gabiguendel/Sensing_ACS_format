@@ -61,12 +61,14 @@
 \author{Gabriel Guendelman}
 \affiliation[First University]
 {AMOS and Department of Chemical and Biological Physics, Weizmann Institute of Science, 76100 Rehovot, Israel}
+\altaffiliation{These authors contributed equally to this work}
 \email{gabriel.guendelman@weizmann.ac.il}
 \phone{+972 (0)8 9343673}
 %%\fax{+123 (0)123 4445557}
 \author{Yulia Lovsky}
 \affiliation[First University]
 {AMOS and Department of Chemical and Biological Physics, Weizmann Institute of Science, 76100 Rehovot, Israel}
+\altaffiliation{These authors contributed equally to this work}
 \author{Eyal Yacobi}
 \affiliation[Second University]
 {Soreq NRC, Yavne, Israel}
@@ -141,7 +143,7 @@ Whispering-gallery-mode (WGM) microresonators are a promising platform for highl
 
 So far, most of the works focused on the detection and sizing of spherical nanoparticles. Our work focuses on Three-dimensional (3D) characterization of arbitrarily shaped nanoparticles.
 
-We introduce a theoretical model that describes interactions between nanoparticles with WGM resonators, taking into account effects that are often not considered, such as the elliptical polarization of the transverse-magnetic (TM) mode, the possible non-spherical shape of the nanoparticle, its finite size, and its ‘open-system’ nature. We also introduce a self-referencing measurement method that allows the extraction of information from measurements done at arbitrary positions of the nanoparticles within the WGM.
+We introduce a theoretical model that describes interactions between nanoparticles with WGM resonators, taking into account effects that are often not considered, such as the elliptical polarization of the transverse-magnetic (TM) mode, the possible non-spherical shape of the nanoparticle, its finite size, and the cavity ‘open-system’ nature. We also introduce a self-referencing measurement method that allows the extraction of information from measurements done at arbitrary positions of the nanoparticles within the WGM.
 
 We verify the model by experimentally probing a single Tungsten-disulfide (\ce{WS_2}) nanotube with a silica microtoroid resonator inside a scanning electron-microscope (SEM) and perform 3D characterization of the nanotube.
 
@@ -261,7 +263,7 @@ The expression for interaction with a circularly polarized field is of the form,
 \end{equation}
 where we define two in-quadrature terms, which result from the two in-quadrature components of the TM electrical field, the polarizability tensor asymmetry and the nanoparticle orientation  (for an example see supporting information). The subscript $cp$ stand for "cross-polarization", indicating that this term represents backscattering from different in-quadrature polarizations, e.g. $E_r \rightarrow iE_{\phi}$ and vice-versa.
 
-The loss rate is the sum of the absorption loss rate $\gamma_a$, which is proportional to the imaginary part of the polarizability tensor $\mathcal{I}m[\bar{ \bar \alpha}]$ and the scattering loss rate $\gamma_s$, which is proportional to $|\alpha|^2$. The loss rate is also dependent on the polarization of the field and the orientation of the particle relative to it.
+The loss rate is the sum of the absorption loss rate $\gamma_a$, which is proportional to the imaginary part of the polarizability tensor $\mathcal{I}m[\bar{ \bar \alpha}]$ and the scattering loss rate $\gamma_s$, which is proportional to $|\alpha|^2$~\cite{arnold:imag}. The loss rate is also dependent on the polarization of the field and the orientation of the particle relative to it.
 \begin{figure}[H]
 \centering
              \includegraphics[trim=0cm 0.0cm 0.0cm 0.0cm, clip, width=0.5\textwidth]{Images/interaction.png}
@@ -308,8 +310,8 @@ An example of a single-shot spectrum with the nanotube brought into the evanesce
 
 \begin{figure}[H]
 \centering
-          \includegraphics[width=0.95\textwidth]{Images/figure_3_v4.png}
-    \caption{\textbf{Measurement of the induced spectral changes.} \textbf{a,} Image of the experimental setup inside the SEM (Zeiss Supra\textsuperscript{TM}). \textbf{1,} SEM objective, \textbf{2,} Resonator chip positioned on a XYZ piezo-actuator Klocke Nanotechnik\textsuperscript{TM} , \textbf{3,} Home-built Nanofiber holder and stretcher mounted on the SEMs positioning system, \textbf{4,} Kleindiek\textsuperscript{TM} nano-manipulator on which the nanotip and nanotube are mounted, \textbf{5,} WGM silicon chip accommodating about 30 resonators. \textbf{b,} The tapered coupled microtoroid with a nanotip brought close to the microresonator surface. \textbf{Inset:} Close-up of the nanotube mounted on the nanotip near the resonators surface. \textbf{c,} A recorded spectra of the microtoroid with the nanotube outside (blue curve) and inside (red curve) the optical mode. The black curves are fits from which the center frequencies and widths were extracted. The bare cavity fitted parameters are: $h=29$MHz and $\kappa=28$MHz. \textbf{d,} The recorded center frequencies of the two normal modes and the splitting between them change in time. Top: The asymmetric normal mode center frequency. Center: The symmetric normal mode center frequency. Bottom: The resulting splitting. The blue circles mark the values when the nanotube is out of the mode (far) and the red circles mark the values when the nanotube is positioned inside the evanescent field, as close as possible to the surface without making contact. The induced splitting is twice of $\Delta \omega = 3.4$MHz. The average shift of the center frequency, $\textit S \omega$, is $10$MHz. This gives us a 'normalized induced splitting' of $0.34$, in this example. The presented signals of center frequency were corrected for a linear drift due to thermal effects. The splitting signal is the difference between the raw data of the central frequencies.
+          \includegraphics[width=0.95\textwidth]{Images/figure_3_v5.png}
+    \caption{\textbf{Measurement of the induced spectral changes.} \textbf{a,} Image of the experimental setup inside the SEM (Zeiss Supra\textsuperscript{TM}). \textbf{b,} The tapered coupled microtoroid with a nanotip brought close to the microresonator surface. \textbf{Inset:} Close-up of the nanotube mounted on the nanotip near the resonators surface. \textbf{c,} A recorded spectra of the microtoroid with the nanotube outside (blue curve) and inside (red curve) the optical mode. The black curves are fits from which the center frequencies and widths were extracted. The bare cavity fitted parameters are: $h=29$MHz and $\kappa=28$MHz. \textbf{d,} The recorded center frequencies of the two normal modes and the splitting between them change in time. Top: The asymmetric normal mode center frequency. Center: The symmetric normal mode center frequency. Bottom: The resulting splitting. The blue circles mark the values when the nanotube is out of the mode (far) and the red circles mark the values when the nanotube is positioned inside the evanescent field, as close as possible to the surface without making contact. The induced splitting is twice of $\Delta \omega = 3.4$MHz. The average shift of the center frequency, $\textit S \omega$, is $10$MHz. This gives us a 'normalized induced splitting' of $0.34$, in this example. The presented signals of center frequency were corrected for a linear drift due to thermal effects. The splitting signal is the difference between the raw data of the central frequencies.
 		\label{fig:experiment}}
 \end{figure}
 
@@ -348,8 +350,8 @@ We can fully characterize a uniaxial particle (single \ce{WS_2} nanotube) solemn
 
 \begin{figure}[H]
 \centering
-   \includegraphics[width=0.5\textwidth]{Images/NTset5TM-addphase038.png}\\
-    \includegraphics[width=0.475\textwidth]{Images/TEM_NT_ratio_038A.png}
+   \includegraphics[width=0.5\textwidth]{Images/NTset5TM-addphase038B.png}\\
+    \includegraphics[width=0.475\textwidth]{Images/TEM_NT_ratio_038B.png}
     \caption{ \textbf{a,} The normalized induced splitting (top) and the normalized induced difference in broadening (bottom) between the symmetric and the antisymmetric normal modes of the TM mode vs. the position of the nanotube along the equator. Top: The normalized induced splitting is obtained according to the method described for the TE measurement, (Fig.~\ref{fig:TE_set19_splitting}). The data ($\Delta \omega / \textit{S} \omega$) is marked by the blue circles. The blue curve is the best fit to the data using eq.~\ref{eq:delta_omega_approxTM} and the shaded range indicates the $95\%$ confidence intervals of the fit.
     The dashed blue light curve is the best fit for the normalized induced splitting without the correction for an open system. Bottom: The data ($\Delta \Gamma / \textit{S} \Gamma$) marked with the red circles. The red curve is the best fit to the normalized and the shaded range indicates the $95\%$ confidence intervals of the fit.
     \textbf{b,} Summary of the measured $R_{re}=0.38$, $R_{im}=0.12$, $R_{im/re}^{||}=0.5$ and $R_{im/re}^{\perp}=0.16$ polarizability ratios on top of a TEM (Transmission electron microscope) image of a typical \ce{WS_2} nanotube as  used in our work. The scale-bar of the TEM image of the nanotube is $10nm$.}
@@ -383,8 +385,8 @@ where the error range marks the standard errors of the fits.
 \begin{split}
    R_{re}  &= \frac{\alpha^{re}_{\perp}}{\alpha^{re}_{||}}; ~~~~~~~~~
     R_{im}  = \frac{\alpha^{im}_{\perp}}{\alpha^{im}_{||}}; \\
-    R_{im/re}^{||}  &= \frac{\alpha^{re}_{||}}{\alpha^{im}_{||}} ~~~~~~~~~
-    R_{im/re}^{\perp}  = \frac{\alpha^{re}_{\perp}}{\alpha^{im}_{\perp}}
+    R_{im/re}^{||}  &= \frac{\alpha^{im}_{||}}{\alpha^{re}_{||}} ~~~~~~~~~
+    R_{im/re}^{\perp}  = \frac{\alpha^{im}_{\perp}}{\alpha^{re}_{\perp}}
 \end{split}
 \end{equation}
 Three of these ratios dictate the fourth.
@@ -409,7 +411,7 @@ For the calculation of the ratio values, we approximate the end of the nanotube 
                                 & $R_{re}$ & $R_{im}$ & $R_{im/re}^{||}$ & $R_{im/re}^{\perp}$ \\
     \hline
     Nanotube measured  & $0.38 \pm 0.05$ &  $0.12 \pm 0.06$ & $0.5 \pm 0.05$ & $0.16 \pm 0.8$ \\
-    Nanotube calculated\textsuperscript{\emph{a}}  & 0.44 &  0.05 & ?? & ?? \\
+    Nanotube calculated\textsuperscript{\emph{a}}  & 0.44 &  0.15 & 0.013 & 0.0045 \\
     Bulk calculated\textsuperscript{\emph{a}}  & $0.48$ &  $0.017$ & $0.04$ & $0.0015$ \\
     \hline
   \end{tabular}
@@ -425,8 +427,8 @@ The green dash-dot curve in Fig.~\ref{fig:pol_ratios}a represents the calculated
 
 \begin{figure}[H]
 \centering
-   \includegraphics[width=0.5\textwidth]{Images/Rre_semilog_NT91A.png}\\
-   \includegraphics[width=0.5\textwidth]{Images/Rim_semilog_NT6_a1.png}
+   \includegraphics[width=0.5\textwidth]{Images/Rre_semilog_NT91B.png}\\
+   \includegraphics[width=0.5\textwidth]{Images/Rim_semilog_NT6_b1.png}
    \caption{\textbf{The calculated and the measured polarizability ratios of the \ce{WS_2} nanotube.} \textbf{a,} The calculated ratio between the real parts of the polarizabilities $R_{re}$ of a \ce{WS_2} nanotube vs. the overlap length between the nanotube and the optical mode (blue curve). The measured polarizability ratios are shown: The first (blue circle) $0.38 \pm 0.05$ is measured in our experiment and the second (green circle) $0.16.\pm0.05$ was measured previously for a similar type of nanotubes at a wavelength of 633nm~\cite{tenne2005orientation}. The green dash-dot curve is the calculated polarizability ratio for a $25nm$ outer diameter nanotube illuminated with $633nm$ light. The dashed black curve represents the polarizability ratio for bulk-\ce{WS_2}. \textbf{b,} The calculated ratio between the imaginary parts of the polarizabilities $R_{im}$ of a \ce{WS_2} nanotube vs. the overlap length between the nanotube and the optical mode assuming effective permittivity (blue curve) and when taking the normal one (dotted curve). The measured imaginary parts polarizability ratio is shown to be in good agreement with the curve plotted using the corrected effective permittivity (blue circle).}
 \label{fig:pol_ratios}
 \end{figure}
